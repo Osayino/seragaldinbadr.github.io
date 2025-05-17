@@ -1,27 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serag Aldin Badr</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>👑 Serag Aldin Badr</h1>
-    <p>Systems thinker. Agronomist. AI builder in progress.</p>
-    <img src="assets/serag.jpg" alt="Serag in the field" class="profile-pic"/>
-    <p>From cashew fields in Brazil to AI-powered supply chains. Applying to Fulbright to build tools that outlast institutions.</p>
-    
-    <h2>📁 Projects</h2>
-    <ul>
-      <li>🌱 Embrapa: Biochar research for drought resilience</li>
-      <li>⚙️ MVP: AI + GIS for smarter land & water systems (in dev)</li>
-    </ul>
+  <title>Serag Aldin Badr — Agronomist & Systems Builder</title>
+  <meta name="description" content="Serag Aldin Badr — Dutch-Egyptian agronomist turned AI systems thinker. Building tools that outlast institutions." />
 
-    <a href="assets/cv.pdf" class="btn">📄 Download CV</a>
-    <br><br>
-    <a href="ops.html" class="link-dark">/ops</a>
-  </div>
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Serag Aldin Badr" />
+  <meta property="og:description" content="From cashew fields in Brazil to AI-powered supply chains. Applying to Fulbright to build sovereign systems." />
+  <meta property="og:image" content="https://seragaldinbadr.github.io/assets/serag.jpg" />
+  <link rel="icon" href="assets/favicon.ico" />
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+  <!-- Theme toggle (optional) -->
+  <button id="theme-toggle" class="fixed top-4 right-4 p-2 bg-gray-800 rounded z-10">
+    🌙/☀️
+  </button>
+
+  <main class="max-w-3xl mx-auto px-6 py-12 space-y-16">
+    <!-- Hero -->
+    <section class="text-center space-y-6">
+      <img src="assets/serag.jpg" alt="Serag in the field"
+           class="w-40 h-40 rounded-full mx-auto border-4 border-teal-400 shadow-lg" />
+      <h1 class="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
+        Serag Aldin Badr
+      </h1>
+      <p class="text-lg md:text-xl">
+        Agronomist → Systems thinker → AI & GIS builder in pursuit of institutional‐proof impact.
+      </p>
+      <div class="space-x-4">
+        <a href="assets/cv.pdf"
+           class="inline-block bg-teal-400 text-gray-900 font-semibold px-6 py-3 rounded-lg shadow hover:bg-teal-500 transition">
+          📄 Download CV
+        </a>
+        <a href="assets/ops.html"
+           class="text-sm text-gray-400 hover:text-gray-200">/ops</a>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-bold border-b-2 border-gray-700 pb-2">📁 Projects</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start space-x-3">
+          <span class="text-teal-400 text-2xl">🌱</span>
+          <span>Embrapa: Biochar research for drought resilience</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="text-teal-400 text-2xl">⚙️</span>
+          <span>MVP: AI + GIS for smarter land & water systems (in development)</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer / Social -->
+    <footer class="text-center space-y-4 text-sm text-gray-500">
+      <p>Connect with me:</p>
+      <div class="inline-flex space-x-6">
+        <a href="https://linkedin.com/in/seragbadr" class="hover:text-teal-300">LinkedIn</a>
+        <a href="https://github.com/seragbadr" class="hover:text-teal-300">GitHub</a>
+        <a href="https://twitter.com/seragbadr" class="hover:text-teal-300">Twitter</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Dark mode toggle
+    const btn = document.getElementById('theme-toggle');
+    btn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
