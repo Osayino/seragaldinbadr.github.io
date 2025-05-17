@@ -3,25 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Serag Aldin Badr — Tropical Agro-AI Systems Builder</title>
-  <meta name="description" content="Serag Aldin Badr: tropical-agriculture researcher, self-taught AI builder, supply-chain systems thinker. From Brazil’s cashew belt to Wageningen labs, fusing biochar science, field data and machine learning." />
-  <meta id="theme-color-meta" name="theme-color" content="#0f172a" /> <script type="application/ld+json">
+  <title>Serag Aldin Badr — AI for Resilient Agri-Food Systems | Researcher & Innovator</title>
+  <meta name="description" content="Serag Aldin Badr, Wageningen alumnus (B.Sc. ILWM), bridging deep tropical agriculture expertise (Embrapa/biochar research) with self-taught AI to build resilient agri-food systems. Pursuing M.Sc. (2025-2027) and seeking collaborations with leading US institutions (Harvard, MIT, Stanford, Cornell) for high-impact research and publications."/>
+  <meta id="theme-color-meta" name="theme-color" content="#0f172a" />
+
+  <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Person",
     "name":"Serag Aldin Badr",
-    "url":"https://Osayino.github.io", "image":"https://Osayino.github.io/assets/serag.jpg", "sameAs":[
+    "url":"https://Osayino.github.io",
+    "image":"https://Osayino.github.io/assets/serag.jpg",
+    "description": "Wageningen University B.Sc. in International Land & Water Management (ILWM). Self-taught AI developer with field research experience at Embrapa Tropical Agroindustry (Brazil) on biochar's impact on cashew root growth and drought resilience. Returning to Wageningen for an M.Sc. (2025-2027, exploring ILWM or Geo-Information Sciences) with a mission to leverage AI and systems thinking for resilient agri-food chains in the Global South. Actively seeking research collaborations with leading US institutions (e.g., Harvard, MIT, Stanford, Cornell) to co-author high-impact papers, strengthen grant applications, and ultimately build a YC-backed startup.",
+    "sameAs":[
       "https://linkedin.com/in/osanyin",
       "https://github.com/Osayino",
-      "https://huggingface.co/Seragaldinbadr"
+      "https://huggingface.co/Seragaldinbadr",
+      "https://www.researchgate.net/profile/Serag-Aldin-Badr" // Added ResearchGate
     ],
-    "jobTitle":"Tropical Agriculture Researcher & AI Systems Builder",
+    "jobTitle":"AI Researcher & Agri-Food Systems Innovator",
     "alumniOf":{
         "@type":"EducationalOrganization",
         "name":"Wageningen University & Research"
     },
-    "worksFor":{"@type":"Organization","name":"Independent Consultant"}, "knowsAbout":["Tropical Agriculture","Biochar","Cashew","Drought Resilience","Artificial Intelligence","GIS","Supply Chain Optimization", "Machine Learning", "Python", "Data Analysis"],
-    "nationality":"Dutch"
+    "worksFor":{"@type":"Organization","name":"Independent Researcher & Agri-Tech Developer"},
+    "knowsAbout":["Tropical Agriculture","Biochar","Cashew Physiology","Root Dynamics","Drought Resilience","Sustainable Land Management","Water Management","Artificial Intelligence","Machine Learning","LLMs","Python","GIS","Data Analysis","Systems Thinking","Supply Chain Optimization", "Scientific Writing", "Research Collaboration", "Grant Proposal Development", "MVP Development"],
+    "nationality":"Dutch",
+    "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "bachelor degree",
+        "name": "B.Sc. International Land & Water Management",
+        "educationalLevel": "https://schema.org/BachelorDegree",
+        "provider": {
+          "@type": "CollegeOrUniversity",
+          "name": "Wageningen University & Research"
+        }
+    }
   }
   </script>
 
@@ -32,22 +49,16 @@
       theme: {
         extend: {
           fontFamily: { sans: ['Poppins', 'sans-serif'] },
-          colors: { // Using the refined palette from my previous performance-focused version
-            primary: { DEFAULT: '#10b981', light: '#34d399', dark: '#059669' }, // Emerald
-            accent:  { DEFAULT: '#0ea5e9', light: '#38bdf8', dark: '#0284c7' }, // Sky Blue
+          colors: {
+            primary: { DEFAULT: '#10b981', light: '#34d399', dark: '#059669' },
+            accent:  { DEFAULT: '#0ea5e9', light: '#38bdf8', dark: '#0284c7' },
             light:   { bg: '#f8fafc', text: '#0f172a', card: '#ffffff', border: '#e2e8f0', heading: '#1e293b' },
             dark:    { bg: '#0f172a', text: '#cbd5e1', card: '#1e293b', border: '#334155', heading: '#f1f5f9' }
           },
           aspectRatio: { 'video': '16 / 9' },
-          animation: {
-            'ripple': 'ripple 0.6s linear forwards' // Only ripple animation needed now
-          },
-          keyframes: {
-            ripple: { 'to': { transform: 'scale(4)', opacity: '0' } }
-          },
-          transitionTimingFunction: {
-            'custom-ease': 'cubic-bezier(0.4, 0, 0.2, 1)',
-          }
+          animation: { 'ripple': 'ripple 0.6s linear forwards' },
+          keyframes: { ripple: { 'to': { transform: 'scale(4)', opacity: '0' } } },
+          transitionTimingFunction: { 'custom-ease': 'cubic-bezier(0.4, 0, 0.2, 1)' }
         }
       }
     }
@@ -59,170 +70,63 @@
   <style>
     body {
       @apply font-sans antialiased overflow-x-hidden bg-light-bg text-light-text transition-colors duration-300 ease-custom-ease;
-      background-image: linear-gradient(135deg, config('theme.colors.light.bg') 0%, #eef2f7 100%); /* Subtle static gradient */
+      background-image: linear-gradient(135deg, config('theme.colors.light.bg') 0%, #eef2f7 100%);
     }
     .dark body {
       @apply bg-dark-bg text-dark-text;
-      background-image: linear-gradient(135deg, config('theme.colors.dark.bg') 0%, #1a2436 100%); /* Subtle static dark gradient */
+      background-image: linear-gradient(135deg, config('theme.colors.dark.bg') 0%, #1a2436 100%);
     }
-
-    /* Content sections solid background for readability and performance */
-    main > section, footer {
-      @apply bg-light-card dark:bg-dark-card transition-colors duration-300 ease-custom-ease;
-    }
-    #hero { /* Hero can have a slightly more transparent feel to blend with body */
-      @apply bg-light-bg/95 dark:bg-dark-bg/95 backdrop-blur-sm;
-    }
-
+    main > section, footer { @apply bg-light-card dark:bg-dark-card transition-colors duration-300 ease-custom-ease; }
+    #hero { @apply bg-light-bg/95 dark:bg-dark-bg/95 backdrop-blur-sm; }
 
     @layer utilities {
       .ripple-effect-span { position:absolute; border-radius:50%; transform:scale(0); animation: ripple 0.6s linear forwards; }
-      .custom-focus-visible:focus-visible { /* Enhanced focus visibility */
-        outline: 2px solid config('theme.colors.primary.DEFAULT');
-        outline-offset: 3px; /* Slightly more offset */
-        border-radius: 0.375rem; /* md radius */
-      }
-      .dark .custom-focus-visible:focus-visible {
-        outline-color: config('theme.colors.primary.light');
-      }
+      .custom-focus-visible:focus-visible { outline: 2px solid config('theme.colors.primary.DEFAULT'); outline-offset: 3px; border-radius: 0.375rem; }
+      .dark .custom-focus-visible:focus-visible { outline-color: config('theme.colors.primary.light'); }
     }
-
-    h1, h2, h3, h4, h5, h6 { @apply text-light-heading dark:text-dark-heading; }
-
-    .text-gradient {
-      @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
-    }
-    .dark .text-gradient {
-      @apply from-primary-light to-accent-light;
-    }
-
+    h1,h2,h3,h4,h5,h6 { @apply text-light-heading dark:text-dark-heading; }
+    .text-gradient { @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent; }
+    .dark .text-gradient { @apply from-primary-light to-accent-light; }
     #scrollProgress { position:fixed; top:0; left:0; height:3px; background:config('theme.colors.primary.DEFAULT'); width:0%; z-index:10000; transition: width 0.05s linear; }
     .dark #scrollProgress { background:config('theme.colors.primary.light'); }
-    #backTop {
-      position:fixed; bottom:-60px; right:1.5rem;
-      background:config('theme.colors.primary.DEFAULT'); color:white;
-      width: 44px; height: 44px;
-      border-radius:50%; display:flex; align-items:center; justify-content:center;
-      cursor:pointer; z-index:9999; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: bottom 0.3s ease-custom-ease, background-color 0.3s ease-custom-ease, transform 0.3s ease-custom-ease, opacity 0.3s ease-custom-ease;
-      opacity:0;
-    }
+    #backTop { position:fixed; bottom:-60px; right:1.5rem; background:config('theme.colors.primary.DEFAULT'); color:white; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:9999; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:bottom .3s ease-custom-ease, background-color .3s ease-custom-ease, transform .3s ease-custom-ease, opacity .3s ease-custom-ease; opacity:0; }
     #backTop.visible { bottom:1.5rem; opacity:1; }
     #backTop:hover { background:config('theme.colors.primary.dark'); transform: scale(1.05); }
     .dark #backTop { background:config('theme.colors.primary.light'); color:config('theme.colors.dark.bg'); }
     .dark #backTop:hover { background:config('theme.colors.accent.light'); }
-
-    nav {
-      transition: background-color 0.3s ease-custom-ease, box-shadow 0.3s ease-custom-ease;
-      box-shadow: 0 2px 4px rgba(0,0,0,0);
-    }
-    nav.scrolled {
-      @apply bg-light-card/95 dark:bg-dark-card/95 backdrop-blur-md; /* Increased opacity for better legibility */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    .dark nav.scrolled { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-
-    .nav-link {
-      position:relative;
-      padding: 0.5rem 0.25rem;
-      transition: color 0.3s ease-custom-ease, opacity 0.3s ease-custom-ease;
-      color: config('theme.colors.light.text');
-      font-weight: 500;
-      opacity: 0.75;
-    }
-    .dark .nav-link { color: config('theme.colors.dark.text'); }
-    .nav-link:hover { color: config('theme.colors.primary.DEFAULT'); opacity: 1; }
-    .dark .nav-link:hover { color: config('theme.colors.primary.light'); opacity: 1;}
-    .nav-link::after {
-      content:''; position:absolute; left:50%; transform: translateX(-50%); bottom:0;
-      width:0; height:2px; background:config('theme.colors.primary.DEFAULT');
-      border-radius:1px;
-      transition: width 0.3s ease-custom-ease;
-    }
+    nav { transition:background-color .3s ease-custom-ease, box-shadow .3s ease-custom-ease; box-shadow:0 2px 4px rgba(0,0,0,0); }
+    nav.scrolled { @apply bg-light-card/95 dark:bg-dark-card/95 backdrop-blur-md; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+    .dark nav.scrolled { box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+    .nav-link { position:relative; padding:.5rem .25rem; transition:color .3s ease-custom-ease,opacity .3s ease-custom-ease; color:config('theme.colors.light.text'); font-weight:500; opacity:.75; }
+    .dark .nav-link { color:config('theme.colors.dark.text'); }
+    .nav-link:hover { color:config('theme.colors.primary.DEFAULT'); opacity:1; }
+    .dark .nav-link:hover { color:config('theme.colors.primary.light'); opacity:1; }
+    .nav-link::after { content:''; position:absolute; left:50%; transform:translateX(-50%); bottom:0; width:0; height:2px; background:config('theme.colors.primary.DEFAULT'); border-radius:1px; transition:width .3s ease-custom-ease; }
     .dark .nav-link::after { background:config('theme.colors.primary.light'); }
-    .nav-link.active { color: config('theme.colors.primary.DEFAULT'); font-weight:600; opacity: 1; }
-    .dark .nav-link.active { color: config('theme.colors.primary.light'); }
-    .nav-link.active::after { width: 60%; }
-
-    .project-card { /* Shared card style for projects and research */
-      @apply bg-light-card dark:bg-dark-card rounded-lg p-6 shadow-lg
-             transform transition-all duration-300 ease-custom-ease hover:shadow-xl hover:-translate-y-1;
-      border: 1px solid config('theme.colors.light.border');
-    }
-    .dark .project-card { border: 1px solid config('theme.colors.dark.border'); }
+    .nav-link.active { color:config('theme.colors.primary.DEFAULT'); font-weight:600; opacity:1; }
+    .dark .nav-link.active { color:config('theme.colors.primary.light'); }
+    .nav-link.active::after { width:60%; }
+    .project-card { @apply bg-light-card dark:bg-dark-card rounded-lg p-6 shadow-lg transform transition-all duration-300 ease-custom-ease hover:shadow-xl hover:-translate-y-1; border:1px solid config('theme.colors.light.border'); }
+    .dark .project-card { border:1px solid config('theme.colors.dark.border'); }
     .project-card h3 { @apply text-light-heading dark:text-dark-heading font-semibold; }
     .project-card p, .project-card ul { @apply text-gray-600 dark:text-gray-400; }
-
-    input[type="text"], input[type="email"], textarea {
-      @apply w-full px-4 py-3 rounded-md border bg-light-bg dark:bg-dark-bg
-             text-light-text dark:text-dark-text
-             border-light-border dark:border-dark-border
-             focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-card dark:focus:ring-offset-dark-card focus:ring-primary dark:focus:ring-primary-light
-             transition-all duration-300 ease-custom-ease;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.03) inset;
-    }
-    input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
-        @apply text-gray-400 dark:text-gray-500;
-    }
-
-    .button {
-      @apply px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transform active:scale-95
-             transition-all duration-200 ease-custom-ease custom-focus-visible;
-    }
+    input[type="text"],input[type="email"],textarea { @apply w-full px-4 py-3 rounded-md border bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text border-light-border dark:border-dark-border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-card dark:focus:ring-offset-dark-card focus:ring-primary dark:focus:ring-primary-light transition-all duration-300 ease-custom-ease; box-shadow:0 1px 2px rgba(0,0,0,0.03) inset; }
+    input[type="text"]::placeholder,input[type="email"]::placeholder,textarea::placeholder { @apply text-gray-400 dark:text-gray-500; }
+    .button { @apply px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transform active:scale-95 transition-all duration-200 ease-custom-ease custom-focus-visible; }
     .button-primary { @apply button bg-primary text-white hover:bg-primary-dark; }
     .dark .button-primary { @apply bg-primary-light text-dark-bg hover:bg-accent-light; }
-    .button-secondary {
-      @apply button border border-primary text-primary hover:bg-primary hover:text-white;
-    }
-    .dark .button-secondary {
-      @apply border-primary-light text-primary-light hover:bg-primary-light hover:text-dark-bg;
-    }
+    .button-secondary { @apply button border border-primary text-primary hover:bg-primary hover:text-white; }
+    .dark .button-secondary { @apply border-primary-light text-primary-light hover:bg-primary-light hover:text-dark-bg; }
     .link-styled { @apply text-primary dark:text-primary-light underline hover:opacity-80 custom-focus-visible rounded; }
-
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto !important; }
-      *, *::before, *::after {
-        animation-duration: 0.001ms !important;
-        animation-delay: 0ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
-        transition-delay: 0ms !important;
-        scroll-behavior: auto !important;
-      }
-      [data-aos] {
-        opacity: 1 !important;
-        transform: none !important;
-      }
-    }
-
-    main > section { @apply py-16 md:py-20 lg:py-24; }
+    @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto !important;} *,*::before,*::after{animation-duration:.001ms !important;animation-delay:0ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;transition-delay:0ms !important;scroll-behavior:auto !important;} [data-aos]{opacity:1 !important;transform:none !important;} }
+    main>section { @apply py-16 md:py-20 lg:py-24; }
     h1 { @apply text-4xl sm:text-5xl lg:text-6xl font-bold; }
-    h2 { @apply text-3xl sm:text-4xl lg:text-5xl font-bold; }
+    h2 { @apply text-2xl sm:text-3xl lg:text-4xl font-bold; }
     h3 { @apply text-xl sm:text-2xl lg:text-3xl font-semibold; }
     p, li, input, textarea { @apply text-base md:text-lg leading-relaxed md:leading-relaxed; }
     .hero-subtext { @apply text-lg md:text-xl lg:text-2xl; }
-
-    .hero-static-depth-effect { /* Replaces animated blob for subtle depth */
-        content: "";
-        position: absolute;
-        z-index: 0; /* Behind hero text content */
-        width: clamp(300px, 60vw, 600px);
-        height: clamp(300px, 60vw, 600px);
-        background-image: radial-gradient(circle, config('theme.colors.primary.DEFAULT') 0%, transparent 70%);
-        opacity: 0.05; /* Extremely subtle */
-        filter: blur(100px); /* Very soft blur */
-        border-radius: 50%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -60%); /* Adjust vertical positioning slightly */
-        pointer-events: none;
-    }
-    .dark .hero-static-depth-effect {
-        background-image: radial-gradient(circle, config('theme.colors.primary.light') 0%, transparent 70%);
-        opacity: 0.08;
-    }
-
+    .hero-static-depth-effect { content:""; position:absolute; z-index:0; width:clamp(300px,60vw,600px); height:clamp(300px,60vw,600px); background-image:radial-gradient(circle,config('theme.colors.primary.DEFAULT') 0%,transparent 70%); opacity:.05; filter:blur(100px); border-radius:50%; top:50%; left:50%; transform:translate(-50%,-60%); pointer-events:none; }
+    .dark .hero-static-depth-effect { background-image:radial-gradient(circle,config('theme.colors.primary.light') 0%,transparent 70%); opacity:.08; }
   </style>
 </head>
 
@@ -242,9 +146,9 @@
       <ul class="flex justify-center items-center space-x-4 sm:space-x-6 py-3">
         <li><a href="#hero" class="nav-link custom-focus-visible">Home</a></li>
         <li><a href="#projects" class="nav-link custom-focus-visible">Projects</a></li>
-        <li><a href="#research" class="nav-link custom-focus-visible">Research</a></li> {/* Added Research Link */}
-        <li><a href="#clips" class="nav-link custom-focus-visible">Clips</a></li>
-        <li><a href="#contact" class="nav-link custom-focus-visible">Contact</a></li>
+        <li><a href="#research" class="nav-link custom-focus-visible">Research & Goals</a></li>
+        <li><a href="#clips" class="nav-link custom-focus-visible">Field Insights</a></li>
+        <li><a href="#contact" class="nav-link custom-focus-visible">Collaborate</a></li>
       </ul>
     </div>
   </nav>
@@ -258,11 +162,10 @@
         <h1 class="font-bold text-gradient" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
           Serag Aldin Badr
         </h1>
-        {/* Subtitle from OpenAI version */}
-        <h2 class="text-gradient text-xl sm:text-2xl md:text-3xl font-semibold opacity-80" data-aos="fade-up" data-aos-delay="150" data-aos-duration="600">
-            Tropical Agro-AI Systems Builder
+        <h2 class="text-gradient text-xl sm:text-2xl md:text-3xl font-semibold opacity-90" data-aos="fade-up" data-aos-delay="150" data-aos-duration="600">
+            Innovating at the Nexus of Tropical Agriculture & AI
         </h2>
-        <p id="greeting" class="hero-subtext leading-relaxed max-w-xl md:max-w-2xl mx-auto text-light-text/80 dark:text-dark-text/70" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600"></p>
+        <p id="greeting" class="hero-subtext leading-relaxed max-w-xl md:max-w-3xl mx-auto text-light-text/80 dark:text-dark-text/70" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600"></p>
         <p class="text-sm text-gray-500 dark:text-gray-400" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
           🇳🇱 Dutch • 🇬🇧 English • 🇧🇷 Portuguese • 🇪🇸 Spanish
         </p>
@@ -273,7 +176,7 @@
           </a>
           <a href="#clips" class="button-secondary ripple flex items-center justify-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm14.553 1.106A1 1 0 0016 8v4a1 1 0 00.553.894l2 1A1 1 0 0020 13V7a1 1 0 00-1.447-.894l-2-1z" /></svg>
-            Field Clips
+            Field Insights
           </a>
         </div>
       </div>
@@ -281,38 +184,52 @@
 
     <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="500">
       <h2 class="font-bold text-center mb-12 md:mb-16">
-        Key Projects & Innovations
+        Foundational Research & AI Prototypes
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
         <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
-          <h3 class="mb-3">Cashew Biochar Root-Dynamics Trial</h3>
-          <p class="text-sm md:text-base">Led a five-level biochar experiment on 60+ cashew trees during an Embrapa Ceará internship. Tracked root depth and water-use efficiency via drone imagery and in-situ sensors, developing AI models that unlocked 30% irrigation savings.</p>
+          <h3 class="mb-3">Embrapa Cashew & Biochar Study: Enhancing Drought Resilience</h3>
+          <p class="text-sm md:text-base">Conducted intensive research at <strong class="font-medium text-light-heading dark:text-dark-heading">Embrapa Tropical Agroindustry</strong> on the impact of five distinct biochar concentrations on root architecture and water productivity in over 60 cashew trees across four soil depths in Ceará, Brazil. This work is foundational for developing AI-driven strategies to bolster agricultural resilience in arid and semi-arid tropical regions. (<em>Journal manuscript with Embrapa in preparation</em>).</p>
         </div>
         <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
-          <h3 class="mb-3">SupplyChainAI for Smallholder Cashew</h3>
-          <p class="text-sm md:text-base">Designed and simulated an AI-powered dashboard predicting shell-in-kernel yields and optimizing freight routes from Ceará, Brazil to Rotterdam. Leveraged AIS shipping feeds and reinforcement learning, achieving an 18% logistics-cost reduction in simulations.</p>
+          <h3 class="mb-3">AI for Agri-Supply Chain Disruption</h3>
+          <p class="text-sm md:text-base">Prototyped an AI system to optimize cashew supply chains, demonstrating potential for significant cost reduction and efficiency gains for smallholders using predictive analytics and logistics optimization. This reflects my commitment to building practical, tech-driven solutions for real-world agricultural challenges.</p>
+        </div>
+        <div class="project-card md:col-span-2" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
+            <h3 class="mb-3">AI Skills & MVP Development for Agri-Tech</h3>
+            <p class="text-sm md:text-base">Actively honing my expertise in Python, Machine Learning, and LLMs. I translate theoretical knowledge into practical applications by building Minimum Viable Products (MVPs) addressing specific challenges within agri-food systems. My focus is on developing scalable, data-driven tools that empower stakeholders in the Global South. (<em>Current projects and code available on <a href="https://github.com/Osayino" target="_blank" rel="noopener noreferrer" class="link-styled">GitHub</a></em>).</p>
         </div>
       </div>
     </section>
 
     <section id="research" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="500">
-      <h2 class="font-bold text-center mb-12 md:mb-16">Peer-Reviewed Work & Drafts</h2>
+      <h2 class="font-bold text-center mb-12 md:mb-16">Current Publications & Strategic Research Goals (2025-2027)</h2>
       <div class="space-y-8">
         <article class="project-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
-          <h3 class="font-semibold mb-2">Draft: Biochar-Driven Root Plasticity in Cashew (Anacardium occidentale L.) Under Varying Water Regimes</h3>
-          <p class="text-sm md:text-base">Co-authoring manuscript with Embrapa Agroindústria Tropical. This research quantifies hydraulic redistribution and root architectural changes across four distinct soil depths influenced by five biochar amendment rates, providing critical insights for drought resilience in tropical agroecosystems. (Targeting: Plant and Soil / Field Crops Research)</p>
+          <h3 class="font-semibold mb-3">In Prep: Biochar's Impact on Cashew Root Systems & Water Productivity in Brazilian Drylands</h3>
+          <p class="text-sm md:text-base">Co-authoring with <strong class="font-medium text-light-heading dark:text-dark-heading">Embrapa Agroindústria Tropical</strong>. This paper details field experiment results (N > 60 trees, 5 biochar levels, 4 soil depths) demonstrating biochar's significant effects on root development and water use efficiency, critical for Ceará's cashew sector and similar agroecosystems.</p>
         </article>
         <article class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
-          <h3 class="font-semibold mb-2">Call for Collaboration: AI in Phenotyping & Ag-Supply Networks</h3>
-          <p class="text-sm md:text-base">Actively seeking US-based Principal Investigators and research groups specializing in high-throughput plant phenotyping or resilient agricultural supply networks. Interested in developing joint AI pipelines, grant proposals, and co-authoring impactful publications. <a href="#contact" class="link-styled">Let's discuss a potential synergy &rarr;</a></p>
+            <h3 class="font-semibold mb-3">Target: 4-5 High-Impact Publications (2025-2027)</h3>
+            <p class="text-sm md:text-base">During my upcoming M.Sc. at Wageningen (Sept 2025 - Aug 2027, exploring ILWM or Geo-Information Sciences), my objective is a "hardcore" publication output. Following the Embrapa collaboration, I aim to publish a series of papers, including critical reviews and policy-focused analyses on AI applications in tropical agriculture, sustainable resource management, and resilient food value chains.</p>
+        </article>
+        <article class="project-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
+          <h3 class="font-semibold mb-3">Seeking Collaborators: Leading US Universities (Harvard, MIT, Stanford, Cornell, etc.)</h3>
+          <p class="text-sm md:text-base">My ambition is to collaborate with world-class researchers and labs at institutions like <strong class="font-medium text-light-heading dark:text-dark-heading">Harvard, MIT, Stanford, and Cornell</strong> to co-author groundbreaking papers. These collaborations are key to my development, strengthening potential Fulbright/Dutch2USA grant applications, and building a foundation for future innovation. I am particularly interested in projects applying AI to:
+            <ul class="list-disc list-inside mt-2 space-y-1">
+                <li>High-throughput phenotyping for climate-resilient crops.</li>
+                <li>Optimizing smallholder access to markets through intelligent supply chains.</li>
+                <li>Developing early-warning systems for agricultural risks in the Global South.</li>
+            </ul>
+          You can also follow my academic journey and future publications on <a href="https://www.researchgate.net/profile/Serag-Aldin-Badr" target="_blank" rel="noopener noreferrer" class="link-styled">ResearchGate</a>.
+          <a href="#contact" class="link-styled block mt-3 font-semibold">Propose a Collaboration &rarr;</a></p>
         </article>
       </div>
     </section>
 
-
     <section id="clips" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="500">
       <h2 class="font-bold text-center mb-12 md:mb-16">
-        Field Insights & Demonstrations
+        From the Field: Research in Action
       </h2>
       <div class="aspect-video rounded-lg overflow-hidden shadow-xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border relative">
         <iframe title="Field Clip Showcase" class="w-full h-full absolute inset-0 hidden" data-src="REPLACE_VIDEO_ID" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -325,60 +242,41 @@
     </section>
 
     <section id="contact" class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up" data-aos-duration="500">
-      <h2 class="font-bold mb-8 md:mb-12">Let’s Accelerate Tropical AgTech Together</h2>
+      <h2 class="font-bold mb-8 md:mb-12">Partner with an Agro-AI Innovator: Let's Publish & Build</h2>
       <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="space-y-6">
-        <div>
-          <label for="contact-name" class="sr-only">Your Name</label>
-          <input id="contact-name" name="name" type="text" placeholder="Your Name" required/>
-        </div>
-        <div>
-          <label for="contact-email" class="sr-only">Your Email</label>
-          <input id="contact-email" name="email" type="email" placeholder="Your Email" required/>
-        </div>
-        <div>
-          <label for="contact-message" class="sr-only">Your Message</label>
-          <textarea id="contact-message" name="message" rows="5" placeholder="How can our expertise align for impactful projects or research?" required></textarea>
-        </div>
-        <button type="submit" class="button-primary ripple">
-          Send Message
-        </button>
+        <div><label for="contact-name" class="sr-only">Your Name</label><input id="contact-name" name="name" type="text" placeholder="Your Name" required/></div>
+        <div><label for="contact-email" class="sr-only">Your Email</label><input id="contact-email" name="email" type="email" placeholder="Your Email" required/></div>
+        <div><label for="contact-message" class="sr-only">Your Message</label><textarea id="contact-message" name="message" rows="5" placeholder="Interested in co-authoring high-impact research, discussing M.Sc./PhD supervision, exploring MVP development, or partnering on disruptive AgTech? Please outline your ideas." required></textarea></div>
+        <button type="submit" class="button-primary ripple">Send Message</button>
       </form>
     </section>
 
     <footer class="text-center py-12 md:py-16 space-y-6">
       <div class="flex justify-center space-x-6">
-        <a href="https://linkedin.com/in/osanyin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors custom-focus-visible p-2 rounded-md">
-          <svg role="img" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><title>LinkedIn</title><path d="M19.75 0H4.25A4.25 4.25 0 000 4.25v15.5A4.25 4.25 0 004.25 24h15.5A4.25 4.25 0 0024 19.75V4.25A4.25 4.25 0 0019.75 0zM7.69 20.5H4.25V9h3.44v11.5zM5.97 7.9c-1.09 0-1.97-.88-1.97-1.97s.88-1.97 1.97-1.97 1.97.88 1.97 1.97-.88 1.97-1.97 1.97zm14.53 12.6h-3.44v-5.54c0-1.32-.02-3.02-1.84-3.02-1.84 0-2.12 1.44-2.12 2.92v5.64H9.66V9h3.3v1.52h.05c.46-.88 1.58-1.8 3.26-1.8 3.48 0 4.13 2.29 4.13 5.28v6.02z"/></svg>
-        </a>
-        <a href="https://github.com/Osayino" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors custom-focus-visible p-2 rounded-md">
-          <svg role="img" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-        <a href="https://huggingface.co/Seragaldinbadr" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face Profile" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors custom-focus-visible p-2 rounded-md">
-          <svg role="img" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><title>Hugging Face</title><path d="M20.0002 5.15332C19.8733 4.67104 19.2571 4.51733 18.7702 4.64668C18.2821 4.77604 18.1273 5.39289 18.2541 5.87517L19.6162 11.1733C19.6606 11.3528 19.6047 11.5425 19.4702 11.6767C19.3356 11.8108 19.1456 11.8667 18.9656 11.8222L14.9802 10.8667C14.7702 10.8189 14.5913 10.6633 14.5302 10.4533L13.0762 5.00668C12.9733 4.65004 12.5502 4.48004 12.1902 4.58223C11.8302 4.68556 11.6589 5.11223 11.7624 5.4689L13.2162 10.9156C13.2773 11.1256 13.2189 11.3478 13.0762 11.5022C12.9321 11.6567 12.7233 11.7267 12.5189 11.68L9.01889 10.8222C8.80889 10.7745 8.63001 10.6189 8.56889 10.4089L7.25411 5.6689C7.12726 5.18662 6.51103 5.03223 6.02411 5.16223C5.53597 5.29159 5.38129 5.90844 5.50823 6.39072L6.82291 11.1308C6.86726 11.3102 6.81136 11.4999 6.67684 11.6341C6.54231 11.7682 6.35231 11.8241 6.17291 11.7796L3.82291 11.1308C3.38129 11.0122 3.00001 11.3689 3.00001 11.8222C3.00001 12.2756 3.38129 12.6322 3.82291 12.7508L6.17291 13.4008C6.35231 13.4452 6.54231 13.3893 6.67684 13.2552C6.81136 13.121 6.86726 12.9313 6.82291 12.7519L5.50823 17.9919C5.38129 18.4742 5.53597 19.091 6.02411 19.2204C6.51103 19.3504 7.12726 19.196 7.25411 18.7137L8.56889 13.9737C8.61334 13.7943 8.66914 13.6143 8.75411 13.4452L9.01889 13.596C9.22334 13.6413 9.40231 13.7969 9.46334 14.0069L10.9162 19.3756C11.0197 19.7322 11.4429 19.9022 11.8029 19.7999C12.1629 19.6966 12.3329 19.27 12.2297 18.9133L10.7756 13.4667C10.7145 13.2567 10.7729 13.0345 10.9162 12.88L12.5189 12.6022C12.7233 12.5589 12.9321 12.6289 13.0762 12.7833C13.2189 12.9378 13.2773 13.16 13.2162 13.37L11.7624 18.8167C11.6589 19.1733 11.8302 19.5999 12.1902 19.7033C12.5502 19.8056 12.9733 19.6356 13.0762 19.2789L14.5302 13.8322C14.5913 13.6222 14.7702 13.4667 14.9802 13.4189L18.9656 12.4633C19.1456 12.4189 19.3356 12.4748 19.4702 12.6089C19.6047 12.743 19.6606 12.9327 19.6162 13.1122L18.2541 18.4104C18.1273 18.8927 18.2821 19.5095 18.7702 19.6389C19.2571 19.7682 19.8733 19.6145 20.0002 19.1322L21.0002 15.4008V8.88223L20.0002 5.15332Z"/></svg>
+        <a href="https://linkedin.com/in/osanyin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors custom-focus-visible p-2 rounded-md"><svg role="img" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><title>LinkedIn</title><path d="M19.75 0H4.25A4.25 4.25 0 000 4.25v15.5A4.25 4.25 0 004.25 24h15.5A4.25 4.25 0 0024 19.75V4.25A4.25 4.25 0 0019.75 0zM7.69 20.5H4.25V9h3.44v11.5zM5.97 7.9c-1.09 0-1.97-.88-1.97-1.97s.88-1.97 1.97-1.97 1.97.88 1.97 1.97-.88 1.97-1.97 1.97zm14.53 12.6h-3.44v-5.54c0-1.32-.02-3.02-1.84-3.02-1.84 0-2.12 1.44-2.12 2.92v5.64H9.66V9h3.3v1.52h.05c.46-.88 1.58-1.8 3.26-1.8 3.48 0 4.13 2.29 4.13 5.28v6.02z"/></svg></a>
+        <a href="https://github.com/Osayino" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors custom-focus-visible p-2 rounded-md"><svg role="img" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+        <a href="https://huggingface.co/Seragaldinbadr" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face Profile" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors custom-focus-visible p-2 rounded-md"><svg role="img" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><title>Hugging Face</title><path d="M20.0002 5.15332C19.8733 4.67104 19.2571 4.51733 18.7702 4.64668C18.2821 4.77604 18.1273 5.39289 18.2541 5.87517L19.6162 11.1733C19.6606 11.3528 19.6047 11.5425 19.4702 11.6767C19.3356 11.8108 19.1456 11.8667 18.9656 11.8222L14.9802 10.8667C14.7702 10.8189 14.5913 10.6633 14.5302 10.4533L13.0762 5.00668C12.9733 4.65004 12.5502 4.48004 12.1902 4.58223C11.8302 4.68556 11.6589 5.11223 11.7624 5.4689L13.2162 10.9156C13.2773 11.1256 13.2189 11.3478 13.0762 11.5022C12.9321 11.6567 12.7233 11.7267 12.5189 11.68L9.01889 10.8222C8.80889 10.7745 8.63001 10.6189 8.56889 10.4089L7.25411 5.6689C7.12726 5.18662 6.51103 5.03223 6.02411 5.16223C5.53597 5.29159 5.38129 5.90844 5.50823 6.39072L6.82291 11.1308C6.86726 11.3102 6.81136 11.4999 6.67684 11.6341C6.54231 11.7682 6.35231 11.8241 6.17291 11.7796L3.82291 11.1308C3.38129 11.0122 3.00001 11.3689 3.00001 11.8222C3.00001 12.2756 3.38129 12.6322 3.82291 12.7508L6.17291 13.4008C6.35231 13.4452 6.54231 13.3893 6.67684 13.2552C6.81136 13.121 6.86726 12.9313 6.82291 12.7519L5.50823 17.9919C5.38129 18.4742 5.53597 19.091 6.02411 19.2204C6.51103 19.3504 7.12726 19.196 7.25411 18.7137L8.56889 13.9737C8.61334 13.7943 8.66914 13.6143 8.75411 13.4452L9.01889 13.596C9.22334 13.6413 9.40231 13.7969 9.46334 14.0069L10.9162 19.3756C11.0197 19.7322 11.4429 19.9022 11.8029 19.7999C12.1629 19.6966 12.3329 19.27 12.2297 18.9133L10.7756 13.4667C10.7145 13.2567 10.7729 13.0345 10.9162 12.88L12.5189 12.6022C12.7233 12.5589 12.9321 12.6289 13.0762 12.7833C13.2189 12.9378 13.2773 13.16 13.2162 13.37L11.7624 18.8167C11.6589 19.1733 11.8302 19.5999 12.1902 19.7033C12.5502 19.8056 12.9733 19.6356 13.0762 19.2789L14.5302 13.8322C14.5913 13.6222 14.7702 13.4667 14.9802 13.4189L18.9656 12.4633C19.1456 12.4189 19.3356 12.4748 19.4702 12.6089C19.6047 12.743 19.6606 12.9327 19.6162 13.1122L18.2541 18.4104C18.1273 18.8927 18.2821 19.5095 18.7702 19.6389C19.2571 19.7682 19.8733 19.6145 20.0002 19.1322L21.0002 15.4008V8.88223L20.0002 5.15332Z"/></svg></a>
+        <a href="https://www.researchgate.net/profile/Serag-Aldin-Badr" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate Profile" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors custom-focus-visible p-2 rounded-md">
+          <svg role="img" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><title>ResearchGate</title><path d="M16.637 15.316c.32.32.32.838 0 1.159l-1.159 1.159a.82.82 0 01-1.159 0l-3.611-3.611a.82.82 0 010-1.159l1.159-1.159a.82.82 0 011.159 0l3.611 3.611zM12.124 0C5.428 0 0 5.428 0 12.124s5.428 12.124 12.124 12.124 12.124-5.428 12.124-12.124S18.82 0 12.124 0zm0 21.974c-5.453 0-9.85-4.397-9.85-9.85s4.397-9.85 9.85-9.85 9.85 4.397 9.85 9.85-4.397 9.85-9.85 9.85zm5.672-14.298c-.025-.025-.05-.05-.075-.075a4.079 4.079 0 00-5.728 0L9.07 10.443a.82.82 0 000 1.159l1.159 1.159c.32.32.838.32 1.159 0l2.923-2.923c.132-.132.132-.346 0-.478l-.503-.503a.338.338 0 00-.478 0L9.99 12.117a.82.82 0 01-1.159 0L7.672 10.96a.82.82 0 010-1.159L11.908 5.57a4.079 4.079 0 005.728 0l.164.164a.338.338 0 00.478 0l.503-.503a.338.338 0 000-.478l-.164-.164z"/></svg>
         </a>
       </div>
       <p class="text-xs text-gray-500 dark:text-gray-500/80">
-        © <span id="currentYear"></span> Serag Aldin Badr. All rights reserved. <br class="sm:hidden"/>Crafted with passion in Fortaleza, Ceará, Brazil.
+        © <span id="currentYear"></span> Serag Aldin Badr. All rights reserved. <br class="sm:hidden"/>Pioneering AI-driven solutions for a resilient tropical future. Based in Fortaleza, Brazil (returning to NL Sept 2025).
       </p>
     </footer>
   </main>
 
   <script>
-    // Debounce function
     function debounce(func, wait) {
       let timeout;
       return function executedFunction(...args) {
-        const later = () => {
-          clearTimeout(timeout);
-          func.apply(this, args);
-        };
+        const later = () => { clearTimeout(timeout); func.apply(this, args); };
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
       };
     };
 
     document.addEventListener('DOMContentLoaded', () => {
-      // --- Elements ---
       const themeToggleBtn = document.getElementById('theme-toggle');
       const themeColorMeta = document.getElementById('theme-color-meta');
       const scrollProgressEl = document.getElementById('scrollProgress');
@@ -387,42 +285,31 @@
       const currentYearEl = document.getElementById('currentYear');
       const navEl = document.querySelector('nav');
       const navLinks = document.querySelectorAll('.nav-link');
-      const sections = Array.from(navLinks).map(link => document.getElementById(link.getAttribute('href').substring(1))).filter(Boolean);
+      const sections = Array.from(navLinks).map(link => {
+          const href = link.getAttribute('href');
+          return href ? document.getElementById(href.substring(1)) : null;
+      }).filter(Boolean);
       const iframeEl = document.querySelector('iframe[data-src]');
       const iframePlaceholderEl = document.querySelector('.iframe-placeholder');
 
-      // --- Constants ---
-      const THEME_STORAGE_KEY = 'portfolio-theme-v3'; // Increment key for any structural changes
+      const THEME_STORAGE_KEY = 'portfolio-theme-v4-narrative';
       const LIGHT_THEME_META_COLOR = tailwind.config.theme.extend.colors.light.bg;
       const DARK_THEME_META_COLOR = tailwind.config.theme.extend.colors.dark.bg;
 
+      function initAOS() { AOS.init({ duration: 500, once: true, offset: 50, easing: 'ease-out-quad'}); }
 
-      // --- AOS Initialization ---
-      function initAOS() {
-        AOS.init({
-          duration: 500,
-          once: true,
-          offset: 50,
-          easing: 'ease-out-quad'
-        });
-      }
-
-      // --- Greeting ---
       function setGreeting() {
         if (!greetingEl) return;
         const hours = new Date().getHours();
-        // Using the narrative from "OpenAI version"
-        const baseIntro = `I'm a tropical-agriculture researcher and self-taught AI builder, focusing on supply-chain systems. My work spans from Brazil’s cashew belt to Wageningen labs, fusing biochar science, field data, and machine learning.`;
+        const baseIntro = `I'm an agri-food systems innovator, combining my <strong class="font-medium text-light-heading dark:text-dark-heading">Wageningen University</strong> training in International Land & Water Management with a dedicated focus on <strong class="font-medium text-light-heading dark:text-dark-heading">Artificial Intelligence</strong>. After a year of impactful field research at <strong class="font-medium text-light-heading dark:text-dark-heading">Embrapa</strong> in Brazil's cashew belt, I'm returning to Wageningen (M.Sc. Sept 2025 - Aug 2027, exploring ILWM or Geo-Information Sciences) with a clear mission: to leverage AI and systems thinking to disrupt outdated agri-food chains and empower communities in the Global South. My ultimate vision includes building a YC-backed startup, and the immediate next step is forging <strong class="font-medium text-light-heading dark:text-dark-heading">elite research collaborations</strong> to co-author high-impact papers.`;
         let timeSpecificGreeting = "Hello.";
-        if (hours < 5) timeSpecificGreeting = "Up late or early start?";
+        if (hours < 5) timeSpecificGreeting = "Up late or starting early?";
         else if (hours < 12) timeSpecificGreeting = "Good morning.";
         else if (hours < 18) timeSpecificGreeting = "Good afternoon.";
         else timeSpecificGreeting = "Good evening.";
-        //greetingEl.innerHTML = `${timeSpecificGreeting} <span class="block mt-1 sm:mt-0 sm:inline">${baseIntro}</span>`;
-         greetingEl.innerHTML = `${timeSpecificGreeting} ${baseIntro}`; // Simpler structure
+        greetingEl.innerHTML = `${timeSpecificGreeting} ${baseIntro}`;
       }
 
-      // --- Theme Management ---
       function applyTheme(isDark) {
         document.documentElement.classList.toggle('dark', isDark);
         if (themeColorMeta) themeColorMeta.content = isDark ? DARK_THEME_META_COLOR : LIGHT_THEME_META_COLOR;
@@ -448,46 +335,36 @@
         }
       }
 
-      // --- Ripple Effect ---
       function initRippleEffect() {
         document.querySelectorAll('.ripple').forEach(button => {
           button.addEventListener('click', function (e) {
-            const existingRipple = this.querySelector('.ripple-effect-span');
-            if(existingRipple) existingRipple.remove();
-
+            const existingRipples = this.querySelectorAll('.ripple-effect-span');
+            existingRipples.forEach(r => r.remove());
             const circle = document.createElement('span');
             const diameter = Math.max(this.clientWidth, this.clientHeight);
             const radius = diameter / 2;
             const rect = this.getBoundingClientRect();
-
             circle.style.width = circle.style.height = `${diameter}px`;
             circle.style.left = `${e.clientX - rect.left - radius}px`;
             circle.style.top = `${e.clientY - rect.top - radius}px`;
             circle.classList.add('ripple-effect-span');
             const isDarkTheme = document.documentElement.classList.contains('dark');
             const buttonIsPrimary = this.classList.contains('button-primary');
-            if (buttonIsPrimary) {
-                 circle.style.background = 'rgba(255,255,255,0.3)';
-            } else {
-                 circle.style.background = isDarkTheme ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
-            }
-
+            if (buttonIsPrimary) { circle.style.background = 'rgba(255,255,255,0.3)'; }
+            else { circle.style.background = isDarkTheme ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)';}
             this.appendChild(circle);
             circle.addEventListener('animationend', () => circle.remove(), {once: true});
           });
         });
       }
 
-      // --- Scroll-dependent Features ---
       const handleScroll = debounce(() => {
         const scrollY = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const navHeight = navEl ? navEl.offsetHeight : 70;
-
         if (scrollProgressEl) scrollProgressEl.style.width = docHeight > 0 ? `${(scrollY / docHeight) * 100}%` : '0%';
         if (navEl) navEl.classList.toggle('scrolled', scrollY > 20);
         if (backTopBtn) backTopBtn.classList.toggle('visible', scrollY > 200);
-
         let currentSectionId = '';
         sections.forEach(section => {
           if (section && scrollY >= section.offsetTop - navHeight - Math.min(100, window.innerHeight * 0.2) ) {
@@ -499,7 +376,6 @@
           link.classList.toggle('active', isActive);
           link.setAttribute('aria-current', isActive ? 'page' : 'false');
         });
-
       }, 50);
 
       function initScrollFeatures() {
@@ -510,11 +386,12 @@
         handleScroll();
       }
 
-      // --- Lazy Load Iframe ---
       function initLazyLoadIframe() {
-        if (!iframeEl) return;
+        if (!iframeEl) {
+          if(iframePlaceholderEl) iframePlaceholderEl.style.display = 'flex';
+          return;
+        }
         const iframeSrc = iframeEl.dataset.src;
-
         const observer = new IntersectionObserver((entries, obs) => {
           if (entries[0].isIntersecting) {
             if (iframeSrc && iframeSrc !== "#" && iframeSrc !== "REPLACE_VIDEO_ID" && iframeSrc.trim() !== "") {
@@ -527,22 +404,19 @@
             }
             obs.disconnect();
           }
-        }, { rootMargin: '50px', threshold: 0.01 }); // Load when 50px from viewport, even if only 1% visible
-        observer.observe(iframeEl.parentElement); // Observe parent container
-
-        // Initial placeholder visibility based on data-src
+        }, { rootMargin: '50px', threshold: 0.01 });
+        const elementToObserve = iframeEl.parentElement || iframePlaceholderEl;
+        if (elementToObserve) { observer.observe(elementToObserve); }
         if (!iframeSrc || iframeSrc === "#" || iframeSrc === "REPLACE_VIDEO_ID" || iframeSrc.trim() === "") {
             if (iframePlaceholderEl) iframePlaceholderEl.style.display = 'flex';
             iframeEl.classList.add('hidden');
         }
       }
 
-      // --- Dynamic Year ---
       function setDynamicYear() {
         if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
       }
 
-      // --- Initialize All ---
       initAOS();
       setGreeting();
       initializeTheme();
