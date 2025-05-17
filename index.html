@@ -2,175 +2,196 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Serag Aldin Badr — Systems Builder</title>
-  <meta name="description"
-        content="Dutch-Egyptian agronomy student & self-taught in AI. Field-tested in Brazil’s cashew belt; now on a mission to disrupt agriculture & logistics with code." />
+  <meta name="description" content="International Land & Water Management, MSc @WUR, self-taught AI hacker; field-tested in Brazil; building tools to disrupt ag & logistics."/>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Serag Aldin Badr" />
-  <meta property="og:description"
-        content="From cashew fields to reshaping supply chains through technology. Let’s fix real problems." />
-  <meta property="og:image"
-        content="https://Osayino.github.io/seragaldinbadr.github.io/assets/serag.jpg" />
+  <!-- Schema.org for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Serag Aldin Badr",
+    "url":"https://Osayino.github.io",
+    "sameAs":[
+      "https://linkedin.com/in/osanyin",
+      "https://github.com/Osayino",
+      "https://huggingface.co/Seragaldinbadr"
+    ],
+    "jobTitle":"Systems Builder",
+    "alumniOf":"Wageningen University & Research"
+  }
+  </script>
 
-  <!-- Mobile theme color -->
-  <meta name="theme-color" content="#14b8a6" />
-
-  <!-- Tailwind + aspect-ratio plugin -->
+  <!-- Tailwind + Extensions -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Font: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
-
-  <!-- AOS scroll animations -->
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: { sans: ['Poppins','sans-serif'] },
           colors: { primary: '#14b8a6', accent: '#0ea5e9' },
-          aspectRatio: { 'video': '16 / 9' }
+          aspectRatio: { 'video': '16 / 9' },
+          animation: { 'spin-slow': 'spin 20s linear infinite' }
         }
       }
-    };
-    document.addEventListener('DOMContentLoaded', ()=> AOS.init());
+    }
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-  <!-- animate-spin-slow utility -->
+  <!-- Utilities & Custom Styles -->
   <style>
     @layer utilities {
       .animate-spin-slow { animation: spin 20s linear infinite; }
+      .ripple-effect { position: absolute; border-radius: 50%; transform: scale(0); background-color: rgba(255,255,255,0.5); animation: ripple 0.6s linear; }
+      @keyframes ripple { to { transform: scale(4); opacity: 0; } }
     }
+    /* Custom cursor */
+    .custom-cursor { position: fixed; top:0; left:0; width:10px; height:10px; background: var(--cursor-color, rgba(20,184,166,0.7)); border-radius:50%; pointer-events:none; transform:translate(-50%, -50%); transition: transform .1s ease, width .2s ease, height .2s ease; z-index:9999; }
+    .custom-cursor.interactive-hover { width:25px; height:25px; background: var(--cursor-hover-color, rgba(14,165,233,0.5)); }
+
+    /* Glitch effect on name */
+    .glitch { position: relative; display:inline-block; color: transparent; background: linear-gradient(to right,#14b8a6,#0ea5e9); background-clip: text; cursor: pointer; }
+    .glitch::before, .glitch::after { content: attr(data-text); position:absolute; left:0; top:0; width:100%; clip:rect(0,0,0,0); }
+    .glitch::before { animation: glitchTop .8s infinite; }
+    .glitch::after { animation: glitchBottom .6s infinite; }
+    @keyframes glitchTop { 0%,20%,40%,100%{clip:rect(0,900px,0,0);transform:translate(0,0);}10%{clip:rect(10px,900px,50px,0);transform:translate(-2px,-2px);}30%{clip:rect(20px,900px,60px,0);transform:translate(-2px,2px);} }
+    @keyframes glitchBottom { 0%,20%,40%,100%{clip:rect(0,900px,0,0);transform:translate(0,0);}10%{clip:rect(80px,900px,140px,0);transform:translate(2px,2px);}30%{clip:rect(100px,900px,160px,0);transform:translate(2px,-2px);} }
+
+    /* Back-to-top button */
+    #backTop { position: fixed; bottom:2rem; right:2rem; background:#14b8a6; color:#000; padding:.75rem; border-radius:50%; display:none; cursor:pointer; z-index:50; }
+
+    /* Scroll-progress bar */
+    #scrollProgress { position:fixed; top:0; left:0; height:4px; background: #14b8a6; width:0; z-index:1000; }
+
+    /* Smooth theme transition */
+    body, .project-card, button, a { transition: background-color .3s, color .3s, border-color .3s; }
+
+    /* Card styling */
+    .project-card { @apply bg-gray-100 dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-transform transform hover:scale-[1.03]; }
   </style>
 </head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans antialiased overflow-x-hidden">
 
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
-  <!-- Dark/Light Toggle -->
-  <button id="theme-toggle"
-          class="fixed top-4 right-4 p-2 bg-gray-800 rounded z-10">
-    🌙 / ☀️
+  <!-- Custom cursor -->
+  <div id="cursor" class="custom-cursor"></div>
+
+  <!-- Scroll-progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Theme toggle -->
+  <button id="theme-toggle" class="fixed top-4 right-4 p-2 bg-white dark:bg-gray-800 rounded-full shadow ripple" aria-label="Toggle dark/light">
+    <!-- Icon toggled via JS -->
   </button>
 
-  <main class="space-y-16">
+  <!-- Back to top -->
+  <button id="backTop" aria-label="Back to top">↑</button>
 
-    <!-- HERO -->
-    <section class="relative overflow-hidden bg-gray-900">
-      <!-- Animated Background Blob -->
-      <div class="absolute -top-32 -left-32 w-[500px] h-[500px]
-                  bg-gradient-to-tr from-primary to-accent
-                  rounded-full opacity-30 animate-spin-slow"></div>
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white/50 dark:bg-gray-900/70 backdrop-blur-md z-40">
+    <ul class="flex justify-center space-x-8 py-4 text-gray-600 dark:text-gray-300">
+      <li><a href="#hero" class="nav-link">Home</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#clips" class="nav-link">Clips</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
-      <div class="relative max-w-3xl mx-auto px-6 py-20 text-center space-y-6">
-        <!-- Profile Video Placeholder -->
-        <video class="w-40 h-40 rounded-full mx-auto border-4 border-primary shadow-lg object-cover"
-               poster="assets/serag.jpg"></video>
+  <main id="hero" class="pt-24 space-y-32">
 
-        <h1 class="font-extrabold text-5xl bg-clip-text text-transparent
-                   bg-gradient-to-r from-primary to-accent">
-          Serag&nbsp;Aldin&nbsp;Badr
-        </h1>
-
-        <p class="text-gray-300 text-lg max-w-xl mx-auto" data-aos="fade-up">
-          International Land & Water Management student at Wageningen. Field-tested in Brazil’s cashew belt; now
-          self-taught in AI and on a mission to disrupt agriculture & logistics.
-        </p>
-
-        <p class="text-sm text-gray-400" data-aos="fade-up" data-aos-delay="100">
-          🇳🇱 Dutch • 🇬🇧 English • 🇧🇷 Portuguese • 🇪🇸 Spanish
-        </p>
-
-        <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="assets/cv.pdf"
-             class="bg-primary text-gray-900 px-6 py-3 rounded-lg font-semibold shadow-lg
-                    hover:bg-primary/90 transition">
-            📄 CV
-          </a>
-          <a href="media.html"
-             class="border border-gray-600 px-6 py-3 rounded-lg text-gray-300
-                    hover:text-gray-100 hover:border-gray-400 transition">
-            🎥 Field Clips
-          </a>
+    <!-- Hero -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden px-6" id="hero">
+      <div id="blob" class="absolute -top-1/4 -left-1/4 w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-gradient-to-tr from-primary to-accent rounded-full opacity-20 animate-spin-slow pointer-events-none"></div>
+      <div class="relative text-center z-10 space-y-6">
+        <img src="assets/serag.jpg" alt="Serag" class="mx-auto w-40 h-40 rounded-full border-4 border-primary shadow-lg object-cover" data-aos="zoom-in" />
+        <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold glitch" data-text="Serag Aldin Badr" data-aos="fade-up">Serag Aldin Badr</h1>
+        <p id="greeting" class="text-lg max-w-xl mx-auto text-gray-700 dark:text-gray-300" data-aos="fade-up" data-aos-delay="100"></p>
+        <p class="text-sm text-gray-600 dark:text-gray-400" data-aos="fade-up" data-aos-delay="200">🇳🇱 Dutch • 🇬🇧 English • 🇧🇷 Portuguese • 🇪🇸 Spanish</p>
+        <div class="flex justify-center gap-4 pt-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="assets/cv.pdf" class="button-primary bg-primary text-white px-8 py-3 rounded-lg font-semibold shadow ripple flex items-center gap-2"><span>📄 CV</span></a>
+          <a href="#clips" class="button-secondary border border-gray-400 dark:border-gray-600 px-8 py-3 rounded-lg text-gray-700 dark:text-gray-300 ripple flex items-center gap-2"><span>🎥 Field Clips</span></a>
         </div>
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS -->
-    <section class="max-w-4xl mx-auto px-6 py-16 space-y-8">
-      <h2 class="text-3xl font-bold text-center text-gray-100" data-aos="fade-right">
-        📁 Featured Projects
-      </h2>
-
+    <!-- Projects -->
+    <section id="projects" class="max-w-5xl mx-auto px-6 space-y-12" data-aos="fade-up">
+      <h2 class="text-4xl font-bold text-center">📁 Featured Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-105
-                    transition-transform" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-xl font-semibold text-gray-100 mb-2">Biochar Trial (160 ha)</h3>
-          <p class="text-gray-400">
-            Embrapa Ceará — cut irrigation by 30 % with field-tested AI models.
-          </p>
+        <div class="project-card">
+          <h3 class="text-2xl font-semibold mb-2">Biochar Trial (160 ha)</h3>
+          <p>Embrapa internship at Ceará.</p>
         </div>
-
-        <!-- Card 2 -->
-        <div class="bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-105
-                    transition-transform" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-semibold text-gray-100 mb-2">Root Mapper App</h3>
-          <p class="text-gray-400">
-            Open-source GIS tool that maps root depth from phone photos.
-          </p>
+        <div class="project-card">
+          <h3 class="text-2xl font-semibold mb-2">Root Mapper App</h3>
+          <p>Open-source GIS tool mapping root depth from phone photos using computer vision for field use.</p>
         </div>
       </div>
     </section>
 
-    <!-- MEDIA / CLIPS -->
-    <section id="clips" class="max-w-4xl mx-auto px-6 py-16 space-y-4">
-      <h2 class="text-3xl font-bold text-center text-gray-100" data-aos="fade-right">
-        🎥 Field Clips
-      </h2>
-
-      <div class="aspect-video rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="100">
-        <iframe class="w-full h-full lazy"
-                data-src="https://www.youtube.com/embed/REPLACE_VIDEO_ID?rel=0&modestbranding=1"
-                title="Cashew walk-through"
-                allow="accelerometer; gyroscope; encrypted-media; picture-in-picture"
-                allowfullscreen>
-        </iframe>
+    <!-- Field Clips -->
+    <section id="clips" class="max-w-5xl mx-auto px-6 space-y-12" data-aos="fade-up">
+      <h2 class="text-4xl font-bold text-center">🎥 Field Clips</h2>
+      <div class="aspect-video rounded-xl overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800 relative">
+        <iframe class="w-full h-full lazy" data-src="https://www.youtube.com/embed/REPLACE_VIDEO_ID?rel=0&modestbranding=1" allowfullscreen></iframe>
+        <div class="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400">Video coming soon...</div>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="text-center space-y-4 text-sm text-gray-500 py-8 bg-gray-900">
-      <p>Connect with me:</p>
-      <div class="inline-flex space-x-6">
-        <a href="https://www.linkedin.com/in/osanyin/" class="hover:text-primary">LinkedIn</a>
-        <a href="https://github.com/Osayino" class="hover:text-primary">GitHub</a>
-        <a href="https://huggingface.co/Seragaldinbadr" class="hover:text-primary">HuggingFace</a>
+    <!-- Contact -->
+    <section id="contact" class="max-w-2xl mx-auto px-6 text-center space-y-6" data-aos="fade-up">
+      <h2 class="text-3xl font-bold">✉️ Get in Touch</h2>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+        <input name="name" type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-gray-700 text-black dark:text-white" required />
+        <input name="email" type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-gray-700 text-black dark:text-white" required />
+        <textarea name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-gray-700 text-black dark:text-white" required></textarea>
+        <button type="submit" class="bg-primary text-black px-6 py-3 rounded-lg font-semibold shadow ripple">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-10 bg-gray-50 dark:bg-gray-800 space-y-4">
+      <div class="inline-flex space-x-6 justify-center">
+        <a href="https://linkedin.com/in/osanyin" class="hover:text-primary ripple">LinkedIn</a>
+        <a href="https://github.com/Osayino" class="hover:text-primary ripple">GitHub</a>
+        <a href="https://huggingface.co/Seragaldinbadr" class="hover:text-primary ripple">HuggingFace</a>
       </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400">&copy; <span id="currentYear"></span> Serag Aldin Badr. Designed in Fortaleza, Brazil.</p>
     </footer>
   </main>
 
+  <!-- Scripts -->
   <script>
-    // Dark-mode toggle
-    document.getElementById('theme-toggle')
-      .addEventListener('click', () =>
-        document.documentElement.classList.toggle('dark')
-      );
-
-    // Lazy-load YouTube iframe
-    document.addEventListener('DOMContentLoaded', () => {
-      const ifr = document.querySelector('iframe.lazy');
-      if (!ifr) return;
-      const obs = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting) {
-          ifr.src = ifr.dataset.src;
-          obs.disconnect();
-        }
-      }, { threshold: 0.2 });
-      obs.observe(ifr);
+    // AOS init, theme, cursor, ripple, scroll spy/progress, back-to-top, greeting
+    document.addEventListener('DOMContentLoaded', ()=>{
+      // AOS
+      AOS.init({ duration:700, once:true, offset:100 });
+      // Greeting
+      const hr=new Date().getHours(), greet=hr<12?'Good morning':hr<18?'Good afternoon':'Good evening';
+      document.getElementById('greeting').textContent=`${greet}, I build AI-driven ag & logistics tools.`;
+      // Theme
+      const key='theme', stored=localStorage.getItem(key), prefers=window.matchMedia('(prefers-color-scheme:dark)').matches;
+      let dark= stored? stored==='dark' : prefers; const apply=t=>{document.documentElement.classList.toggle('dark',t); localStorage.setItem(key, t?'dark':'light');}; apply(dark);
+      document.getElementById('theme-toggle').innerHTML=dark? '☀️':'🌙'; document.getElementById('theme-toggle').onclick=()=>apply(!document.documentElement.classList.toggle('dark'));
+      // Cursor
+      const cursor=document.getElementById('cursor'); document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px'; cursor.style.top=e.clientY+'px';});
+      document.querySelectorAll('a,button,.project-card').forEach(el=>{el.onmouseenter=()=>cursor.classList.add('interactive-hover'); el.onmouseleave=()=>cursor.classList.remove('interactive-hover');});
+      // Ripple
+      document.querySelectorAll('.ripple').forEach(btn=>{btn.onclick=e=>{const r=document.createElement('span'), d=Math.max(btn.clientWidth,btn.clientHeight), rect=btn.getBoundingClientRect();btn.appendChild(r);r.className='ripple-effect';r.style.width=r.style.height=d+'px';r.style.left=e.clientX-rect.left-d/2+'px';r.style.top=e.clientY-rect.top-d/2+'px';}});
+      // Scroll progress & spy
+      const sp=document.getElementById('scrollProgress'), links=document.querySelectorAll('.nav-link'), secs=['hero','projects','clips','contact'].map(i=>document.getElementById(i));
+      window.onscroll=()=>{const y=window.scrollY, dh=document.body.scrollHeight-window.innerHeight; sp.style.width=(y/dh*100)+'%';
+        secs.forEach((s,i)=>{if(y>=s.offsetTop-200){links.forEach(l=>l.classList.remove('active'));links[i].classList.add('active');}});
+        document.getElementById('backTop').style.display=y>400?'block':'none';};
+      document.getElementById('backTop').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+      // Lazy-load iframe
+      const ifr=document.querySelector('iframe.lazy'), ph=document.querySelector('.iframe-placeholder'); if(ifr){new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){ifr.src=ifr.dataset.src; if(ph)ph.style.display='none'; ifr.style.display='block';o.disconnect();}} ,{threshold:0.2}).observe(ifr); if(!ifr.src&&ph){ph.style.display='flex';ifr.style.display='none';}}
+      // Year
+      document.getElementById('currentYear').textContent=new Date().getFullYear();
     });
   </script>
 </body>
