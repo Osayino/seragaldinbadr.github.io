@@ -3,195 +3,634 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Serag Aldin Badr — Systems Builder</title>
-  <meta name="description" content="International Land & Water Management student at Wageningen. Field-tested in Brazil’s cashew belt; now self-taught in AI and on a mission to disrupt agriculture & logistics."/>
-
-  <!-- Schema.org for SEO -->
-  <script type="application/ld+json">
+  <title>Serag Aldin Badr — Systems Builder & AI Innovator</title>
+  <meta name="description" content="Serag Aldin Badr: International Land & Water Management (Wageningen Alumnus), self-taught AI specialist. Innovating at the intersection of agriculture, logistics, and AI from Brazil's cashew belt to global systems."/>
+  <meta id="theme-color-meta" name="theme-color" content="#111827" /> <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Person",
     "name":"Serag Aldin Badr",
-    "url":"https://Osayino.github.io",
-    "sameAs":[
+    "url":"https://Osayino.github.io", "image":"https://Osayino.github.io/assets/serag.jpg", "sameAs":[
       "https://linkedin.com/in/osanyin",
       "https://github.com/Osayino",
       "https://huggingface.co/Seragaldinbadr"
     ],
-    "jobTitle":"Systems Builder",
-    "alumniOf":"Wageningen University & Research"
+    "jobTitle":"Systems Builder & AI Innovator",
+    "worksFor": {
+        "@type": "Organization",
+        "name": "Self-Employed/Consultant" },
+    "alumniOf":{
+        "@type":"EducationalOrganization",
+        "name":"Wageningen University & Research"
+    },
+    "knowsAbout":["Artificial Intelligence", "Agriculture Technology", "Logistics", "Supply Chain Management", "GIS", "Data Analysis", "Sustainable Development"],
+    "nationality": "Dutch"
   }
   </script>
 
-  <!-- Tailwind + Extensions -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
-          fontFamily: { sans: ['Poppins','sans-serif'] },
-          colors: { primary: '#14b8a6', accent: '#0ea5e9' },
+          fontFamily: { sans: ['Poppins', 'sans-serif'] },
+          colors: {
+            primary: { DEFAULT: '#14b8a6', light: '#a3e635', dark: '#0d9488' }, // Teal-500, Lime-400 for light, Teal-600 for dark
+            accent:  { DEFAULT: '#0ea5e9', light: '#38bdf8', dark: '#0284c7' }, // Sky-500, Sky-400 for light, Sky-600 for dark
+            light:   { bg: '#f8fafc', text: '#0f172a', card: '#ffffff', border: '#e2e8f0' }, // Slate-50, Slate-900, White, Slate-200
+            dark:    { bg: '#0a0e1a', text: '#e2e8f0', card: '#1e293b', border: '#334155' }  // Custom Dark Blue, Slate-200, Slate-800, Slate-700
+          },
           aspectRatio: { 'video': '16 / 9' },
-          animation: { 'spin-slow': 'spin 20s linear infinite' }
+          animation: {
+            'spin-slow': 'spin 30s linear infinite', // Slower spin
+            'gradientBG': 'gradientBG 25s ease infinite alternate', // Slower, alternating gradient
+            'ripple': 'ripple 0.6s linear forwards', // Ensure ripple completes
+            'glitch-top': 'glitchTop 1s linear infinite alternate',
+            'glitch-bottom': 'glitchBottom 0.8s linear infinite alternate'
+          },
+          keyframes: {
+            gradientBG: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '100%': { backgroundPosition: '100% 50%' }
+            },
+            ripple: { 'to': { transform: 'scale(4)', opacity: '0' } },
+            glitchTop: { /* Refined slightly */
+              '0%, 100%': { clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)', transform: 'translate(0,0)'},
+              '10%': { clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 10%)', transform: 'translate(-0.05em, -0.025em)'},
+              '30%': { clipPath: 'polygon(0 40%, 100% 20%, 100% 90%, 0 60%)', transform: 'translate(0.025em, 0.05em)'},
+              '50%': { clipPath: 'polygon(0 20%, 100% 10%, 100% 55%, 0 40%)', transform: 'translate(-0.05em, 0.025em)'}
+            },
+            glitchBottom: { /* Refined slightly */
+              '0%, 100%': { clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)', transform: 'translate(0,0)' },
+              '15%': { clipPath: 'polygon(0 80%, 100% 60%, 100% 100%, 0 100%)', transform: 'translate(0.05em, 0.025em)'},
+              '35%': { clipPath: 'polygon(0 50%, 100% 80%, 100% 100%, 0 90%)', transform: 'translate(-0.025em, -0.05em)'},
+              '55%': { clipPath: 'polygon(0 70%, 100% 50%, 100% 100%, 0 100%)', transform: 'translate(0.05em, -0.025em)'}
+            }
+          }
         }
-      }
+      },
+      plugins: [
+        function({ addUtilities }) { // For focus-visible polyfill-like behavior
+          addUtilities({
+            '.focus-visible\\:outline-primary': { '@media not all and (pointer: fine)': { '&:focus': { outline: '2px solid #14b8a6', 'outline-offset': '2px' } }, '&:focus-visible': { outline: '2px solid #14b8a6', 'outline-offset': '2px' } },
+            '.dark .focus-visible\\:outline-primary': { '@media not all and (pointer: fine)': { '&:focus': { outline: '2px solid #a3e635', 'outline-offset': '2px' } }, '&:focus-visible': { outline: '2px solid #a3e635', 'outline-offset': '2px' } }
+          })
+        }
+      ]
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-  <!-- Utilities & Custom Styles -->
   <style>
-    @layer utilities {
-      .animate-spin-slow { animation: spin 20s linear infinite; }
-      .ripple-effect { position: absolute; border-radius: 50%; transform: scale(0); background-color: rgba(255,255,255,0.5); animation: ripple 0.6s linear; }
-      @keyframes ripple { to { transform: scale(4); opacity: 0; } }
+    /* Animated gradient BG - Subtler */
+    body {
+      background: linear-gradient(-45deg,
+        config('theme.colors.primary.dark') 0%,
+        config('theme.colors.accent.dark') 50%,
+        config('theme.colors.primary.dark') 100%);
+      background-size: 200% 200%; /* Smaller size for slower perceived movement */
+      animation: gradientBG 25s ease infinite alternate;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
+    .dark body { /* Keep dark theme consistent */
+         background: linear-gradient(-45deg,
+            config('theme.colors.dark.bg') 0%,
+            #0f203a 50%, /* A slightly different shade for dark bg animation */
+            config('theme.colors.dark.bg') 100%);
+        background-size: 200% 200%;
+        animation: gradientBG 30s ease infinite alternate;
+    }
+
+    /* Base styles for content readability */
+    body { @apply font-sans antialiased overflow-x-hidden bg-light-bg text-light-text; }
+    .dark body { @apply bg-dark-bg text-dark-text; }
+
+    /* Content sections backdrop for readability */
+    main > section, footer {
+      background-color: rgba(248, 250, 252, 0.8); /* light.bg with alpha */
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .dark main > section, .dark footer {
+      background-color: rgba(10, 14, 26, 0.85); /* dark.bg with alpha */
+    }
+
+
+    @layer utilities {
+      /* Ripple effect is better defined in JS for dynamic creation or Tailwind config */
+      .ripple-effect-span { position:absolute; border-radius:50%; transform:scale(0); animation: ripple 0.6s linear forwards; }
+      /* Custom focus-visible styling (Tailwind plugin handles this better for real projects) */
+      .custom-focus-visible:focus-visible {
+        outline: 2px solid config('theme.colors.primary.DEFAULT');
+        outline-offset: 2px;
+      }
+      .dark .custom-focus-visible:focus-visible {
+        outline-color: config('theme.colors.primary.light');
+      }
+    }
+
     /* Custom cursor */
-    .custom-cursor { position: fixed; top:0; left:0; width:10px; height:10px; background: var(--cursor-color, rgba(20,184,166,0.7)); border-radius:50%; pointer-events:none; transform:translate(-50%, -50%); transition: transform .1s ease, width .2s ease, height .2s ease; z-index:9999; }
-    .custom-cursor.interactive-hover { width:25px; height:25px; background: var(--cursor-hover-color, rgba(14,165,233,0.5)); }
+    .custom-cursor {
+      position:fixed; top:0; left:0;
+      width:8px; height:8px; /* Smaller default */
+      background:var(--cursor-color, config('theme.colors.primary.DEFAULT'));
+      border-radius:50%; pointer-events:none;
+      transform:translate(-50%,-50%);
+      transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                  width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                  height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                  background-color 0.2s ease-out,
+                  mix-blend-mode 0.2s ease-out;
+      z-index:99999;
+      mix-blend-mode: exclusion; /* Default to difference for better visibility on various backgrounds */
+    }
+    .custom-cursor.hover-link {
+      width:30px; height:30px;
+      background:var(--cursor-hover-color, config('theme.colors.accent.DEFAULT'));
+      mix-blend-mode: normal; /* Normal blend for links */
+    }
+    .custom-cursor.hover-text {
+      width:2px; height:20px; /* I-beam like */
+      border-radius: 2px;
+      mix-blend-mode: difference;
+    }
 
-    /* Glitch effect on name */
-    .glitch { position: relative; display:inline-block; color: transparent; background: linear-gradient(to right,#14b8a6,#0ea5e9); background-clip: text; cursor: pointer; }
-    .glitch::before, .glitch::after { content: attr(data-text); position:absolute; left:0; top:0; width:100%; clip:rect(0,0,0,0); }
-    .glitch::before { animation: glitchTop .8s infinite; }
-    .glitch::after { animation: glitchBottom .6s infinite; }
-    @keyframes glitchTop { 0%,20%,40%,100%{clip:rect(0,900px,0,0);transform:translate(0,0);}10%{clip:rect(10px,900px,50px,0);transform:translate(-2px,-2px);}30%{clip:rect(20px,900px,60px,0);transform:translate(-2px,2px);} }
-    @keyframes glitchBottom { 0%,20%,40%,100%{clip:rect(0,900px,0,0);transform:translate(0,0);}10%{clip:rect(80px,900px,140px,0);transform:translate(2px,2px);}30%{clip:rect(100px,900px,160px,0);transform:translate(2px,-2px);} }
+    /* Glitch-on-hover name - Ensure it respects theme */
+    .glitch {
+      position:relative; display:inline-block;
+      color:transparent; /* Text color will be from gradient */
+      background:linear-gradient(to right, config('theme.colors.primary.DEFAULT'), config('theme.colors.accent.DEFAULT'));
+      -webkit-background-clip:text;
+      background-clip:text;
+      cursor:default; /* Or pointer if it links somewhere */
+    }
+    .dark .glitch {
+      background:linear-gradient(to right, config('theme.colors.primary.light'), config('theme.colors.accent.light'));
+      -webkit-background-clip:text;
+      background-clip:text;
+    }
+    .glitch::before, .glitch::after {
+      content:attr(data-text); position:absolute; left:0; top:0;
+      width:100%;
+      color: config('theme.colors.primary.DEFAULT'); /* Fallback color for glitch parts */
+    }
+    .dark .glitch::before { color: config('theme.colors.primary.light'); }
+    .dark .glitch::after  { color: config('theme.colors.accent.light'); }
 
-    /* Back-to-top button */
-    #backTop { position: fixed; bottom:2rem; right:2rem; background:#14b8a6; color:#000; padding:.75rem; border-radius:50%; display:none; cursor:pointer; z-index:50; }
+    .glitch:hover::before { animation: glitch-top 1s linear infinite alternate; }
+    .glitch:hover::after  { animation: glitch-bottom 0.8s linear infinite alternate; }
 
-    /* Scroll-progress bar */
-    #scrollProgress { position:fixed; top:0; left:0; height:4px; background: #14b8a6; width:0; z-index:1000; }
 
-    /* Smooth theme transition */
-    body, .project-card, button, a { transition: background-color .3s, color .3s, border-color .3s; }
+    /* Scroll-progress & back-to-top */
+    #scrollProgress { position:fixed; top:0; left:0; height:4px; background:config('theme.colors.primary.DEFAULT'); width:0%; z-index:10000; transition: width 0.1s linear; }
+    .dark #scrollProgress { background:config('theme.colors.primary.light'); }
+    #backTop {
+      position:fixed; bottom:-50px; right:1.5rem; /* Start off-screen */
+      background:config('theme.colors.primary.DEFAULT'); color:white;
+      width: 40px; height: 40px;
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      cursor:pointer; z-index:9999; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: bottom 0.3s ease-out, background-color 0.3s ease, transform 0.3s ease;
+      opacity:0;
+    }
+    #backTop.visible { bottom:1.5rem; opacity:1; }
+    #backTop:hover { background:config('theme.colors.primary.dark'); transform: translateY(-2px); }
+    .dark #backTop { background:config('theme.colors.primary.light'); color:config('theme.colors.dark.bg'); }
+    .dark #backTop:hover { background:config('theme.colors.accent.light'); }
 
-    /* Card styling */
-    .project-card { @apply bg-gray-100 dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-transform transform hover:scale-[1.03]; }
+
+    /* Sticky Navbar */
+    nav {
+      transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      box-shadow: 0 2px 4px rgba(0,0,0,0); /* Initial transparent shadow */
+    }
+    nav.scrolled {
+      /* backdrop-filter and bg settings are applied via Tailwind classes directly */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .dark nav.scrolled { box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+    .nav-link {
+      position:relative;
+      padding: 0.5rem 0.25rem;
+      transition: color 0.3s ease;
+      color: config('theme.colors.light.text');
+    }
+    .dark .nav-link { color: config('theme.colors.dark.text'); }
+    .nav-link:hover { color: config('theme.colors.primary.DEFAULT'); }
+    .dark .nav-link:hover { color: config('theme.colors.primary.light'); }
+    .nav-link::after {
+      content:''; position:absolute; left:0; bottom:0;
+      width:0; height:2px; background:config('theme.colors.primary.DEFAULT');
+      transition: width 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+    }
+    .dark .nav-link::after { background:config('theme.colors.primary.light'); }
+    .nav-link.active { color: config('theme.colors.primary.DEFAULT'); font-weight:600; }
+    .dark .nav-link.active { color: config('theme.colors.primary.light'); }
+    .nav-link.active::after { width:100%; }
+
+
+    /* Project card refinement */
+    .project-card {
+      @apply bg-light-card dark:bg-dark-card rounded-xl p-6 shadow-lg hover:shadow-xl
+             transform transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02];
+      border: 1px solid config('theme.colors.light.border');
+    }
+    .dark .project-card { border: 1px solid config('theme.colors.dark.border'); }
+    .project-card h3 { @apply text-light-text dark:text-dark-text; }
+    .project-card p { @apply text-gray-600 dark:text-gray-400; }
+
+
+    /* Form elements */
+    input[type="text"], input[type="email"], textarea {
+      @apply w-full px-4 py-3 rounded-lg border bg-light-card dark:bg-dark-card
+             text-light-text dark:text-dark-text
+             border-light-border dark:border-dark-border
+             focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light
+             transition-all duration-300;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+    }
+    input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
+        @apply text-gray-400 dark:text-gray-500;
+    }
+
+    /* Button refinement */
+    .button {
+      @apply px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transform active:scale-95
+             transition-all duration-200 ease-out custom-focus-visible;
+    }
+    .button-primary { @apply button bg-primary text-white hover:bg-primary-dark; }
+    .dark .button-primary { @apply bg-primary-light text-dark-bg hover:bg-accent-light; }
+    .button-secondary {
+      @apply button border border-primary text-primary hover:bg-primary hover:text-white;
+    }
+    .dark .button-secondary {
+      @apply border-primary-light text-primary-light hover:bg-primary-light hover:text-dark-bg;
+    }
+
+    /* Reduced motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .animate-spin-slow, #blob { animation: none !important; }
+      .glitch:hover::before, .glitch:hover::after { animation: none !important; }
+      #gradientBG, body { animation: none !important; }
+    }
+
+    /* Responsive Typography & Padding */
+    main > section { @apply py-16 md:py-24 lg:py-32; }
+    h1 { @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl; }
+    h2 { @apply text-3xl sm:text-4xl md:text-5xl; }
+    h3 { @apply text-xl sm:text-2xl md:text-3xl; }
+    p, li, input, textarea { @apply text-base md:text-lg; }
   </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans antialiased overflow-x-hidden">
 
-  <!-- Custom cursor -->
-  <div id="cursor" class="custom-cursor"></div>
+<body class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text">
+  <a href="#main-content" class="absolute left-[-9999px] top-auto w-px h-px overflow-hidden focus:left-4 focus:top-4 focus:w-auto focus:h-auto focus:p-3 focus:bg-primary focus:text-white focus:z-[100000] focus:rounded custom-focus-visible">Skip to Main Content</a>
 
-  <!-- Scroll-progress -->
-  <div id="scrollProgress"></div>
+  <div id="cursor" class="custom-cursor" aria-hidden="true"></div>
+  <div id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Theme toggle -->
-  <button id="theme-toggle" class="fixed top-4 right-4 p-2 bg-white dark:bg-gray-800 rounded-full shadow ripple" aria-label="Toggle dark/light">
-    <!-- Icon toggled via JS -->
+  <button id="theme-toggle" class="fixed top-4 right-4 p-2.5 z-[99990] rounded-full shadow-lg bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm custom-focus-visible" aria-label="Toggle theme">
+      </button>
+  <button id="backTop" aria-label="Back to top" class="custom-focus-visible">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" /></svg>
   </button>
 
-  <!-- Back to top -->
-  <button id="backTop" aria-label="Back to top">↑</button>
-
-  <!-- Navbar -->
-  <nav class="fixed top-0 w-full bg-white/50 dark:bg-gray-900/70 backdrop-blur-md z-40">
-    <ul class="flex justify-center space-x-8 py-4 text-gray-600 dark:text-gray-300">
-      <li><a href="#hero" class="nav-link">Home</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#clips" class="nav-link">Clips</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
+  <nav class="fixed top-0 w-full bg-light-bg/80 dark:bg-dark-bg/80 backdrop-blur-md z-[99980]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ul class="flex justify-center items-center space-x-6 sm:space-x-8 py-3">
+        <li><a href="#hero" class="nav-link custom-focus-visible">Home</a></li>
+        <li><a href="#projects" class="nav-link custom-focus-visible">Projects</a></li>
+        <li><a href="#clips" class="nav-link custom-focus-visible">Clips</a></li>
+        <li><a href="#contact" class="nav-link custom-focus-visible">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <main id="hero" class="pt-24 space-y-32">
+  <main id="main-content" class="pt-20 sm:pt-24 space-y-24 md:space-y-32 lg:space-y-40">
 
-    <!-- Hero -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden px-6" id="hero">
-      <div id="blob" class="absolute -top-1/4 -left-1/4 w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-gradient-to-tr from-primary to-accent rounded-full opacity-20 animate-spin-slow pointer-events-none"></div>
-      <div class="relative text-center z-10 space-y-6">
-        <img src="assets/serag.jpg" alt="Serag" class="mx-auto w-40 h-40 rounded-full border-4 border-primary shadow-lg object-cover" data-aos="zoom-in" />
-        <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold glitch" data-text="Serag Aldin Badr" data-aos="fade-up">Serag Aldin Badr</h1>
-        <p id="greeting" class="text-lg max-w-xl mx-auto text-gray-700 dark:text-gray-300" data-aos="fade-up" data-aos-delay="100"></p>
-        <p class="text-sm text-gray-600 dark:text-gray-400" data-aos="fade-up" data-aos-delay="200">🇳🇱 Dutch • 🇬🇧 English • 🇧🇷 Portuguese • 🇪🇸 Spanish</p>
-        <div class="flex justify-center gap-4 pt-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="assets/cv.pdf" class="button-primary bg-primary text-white px-8 py-3 rounded-lg font-semibold shadow ripple flex items-center gap-2"><span>📄 CV</span></a>
-          <a href="#clips" class="button-secondary border border-gray-400 dark:border-gray-600 px-8 py-3 rounded-lg text-gray-700 dark:text-gray-300 ripple flex items-center gap-2"><span>🎥 Field Clips</span></a>
+    <section id="hero" class="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
+      <div id="blob" class="absolute -top-1/4 -left-1/4 w-[clamp(300px,70vw,800px)] h-[clamp(300px,70vw,800px)] bg-gradient-to-tr from-primary/30 to-accent/30 dark:from-primary/20 dark:to-accent/20 rounded-full animate-spin-slow pointer-events-none filter blur-3xl opacity-70 dark:opacity-50" aria-hidden="true"></div>
+      <div class="relative text-center z-10 space-y-6 md:space-y-8">
+        <img src="assets/serag.jpg" alt="Serag Aldin Badr" class="mx-auto w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 border-primary dark:border-primary-light shadow-xl object-cover" data-aos="zoom-in" data-aos-duration="800"/>
+        <h1 class="font-extrabold glitch" data-text="Serag Aldin Badr" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+          Serag Aldin Badr
+        </h1>
+        <p id="greeting" class="leading-relaxed max-w-xl md:max-w-2xl mx-auto text-light-text/90 dark:text-dark-text/80" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700"></p>
+        <p class="text-sm text-gray-500 dark:text-gray-400" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+          🇳🇱 Dutch • 🇬🇧 English • 🇧🇷 Portuguese • 🇪🇸 Spanish
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4 md:pt-6" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
+          <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer" class="button-primary ripple flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg>
+            View CV
+          </a>
+          <a href="#clips" class="button-secondary ripple flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm14.553 1.106A1 1 0 0016 8v4a1 1 0 00.553.894l2 1A1 1 0 0020 13V7a1 1 0 00-1.447-.894l-2-1z" /></svg>
+            Field Clips
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="max-w-5xl mx-auto px-6 space-y-12" data-aos="fade-up">
-      <h2 class="text-4xl font-bold text-center">📁 Featured Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="project-card">
-          <h3 class="text-2xl font-semibold mb-2">Biochar Trial (160 ha)</h3>
-          <p>Embrapa internship at Ceará.</p>
+    <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="600">
+      <h2 class="font-bold text-center text-light-text dark:text-dark-text mb-12 md:mb-16">
+        📁 Featured Projects
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+          <h3 class="font-semibold mb-3">Biochar Trial Optimization (160 ha)</h3>
+          <p class="text-sm md:text-base">Developed AI models during an Embrapa Ceará internship, achieving a 30% reduction in irrigation needs by analyzing remote sensing data and soil parameters for precision biochar application.</p>
         </div>
-        <div class="project-card">
-          <h3 class="text-2xl font-semibold mb-2">Root Mapper App</h3>
-          <p>Open-source GIS tool mapping root depth from phone photos using computer vision for field use.</p>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+          <h3 class="font-semibold mb-3">AgriVision Root Mapper</h3>
+          <p class="text-sm md:text-base">Created an open-source mobile GIS tool leveraging computer vision to map crop root depth from smartphone images, aiding in field-based soil health and irrigation assessments.</p>
         </div>
       </div>
     </section>
 
-    <!-- Field Clips -->
-    <section id="clips" class="max-w-5xl mx-auto px-6 space-y-12" data-aos="fade-up">
-      <h2 class="text-4xl font-bold text-center">🎥 Field Clips</h2>
-      <div class="aspect-video rounded-xl overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800 relative">
-        <iframe class="w-full h-full lazy" data-src="https://www.youtube.com/embed/REPLACE_VIDEO_ID?rel=0&modestbranding=1" allowfullscreen></iframe>
-        <div class="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400">Video coming soon...</div>
+    <section id="clips" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="600">
+      <h2 class="font-bold text-center text-light-text dark:text-dark-text mb-12 md:mb-16">
+        🎥 Field Clips & Demonstrations
+      </h2>
+      <div class="aspect-video rounded-xl overflow-hidden shadow-xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border relative">
+        <iframe title="Field Clip Showcase" class="w-full h-full absolute inset-0 hidden" data-src="https://www.youtube.com/embed/REPLACE_VIDEO_ID" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="iframe-placeholder absolute inset-0 flex flex-col items-center justify-center p-4">
+          <svg class="w-16 h-16 text-gray-300 dark:text-gray-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9A2.25 2.25 0 0013.5 5.25h-9A2.25 2.25 0 002.25 7.5v9A2.25 2.25 0 004.5 18.75z" /></svg>
+          <p class="text-gray-500 dark:text-gray-400 text-center">Visual demonstrations and field insights coming soon.</p>
+          <p class="text-xs text-gray-400 dark:text-gray-500 mt-1 text-center">Please replace `REPLACE_VIDEO_ID` in the code with a valid YouTube video ID.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="max-w-2xl mx-auto px-6 text-center space-y-6" data-aos="fade-up">
-      <h2 class="text-3xl font-bold">✉️ Get in Touch</h2>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
-        <input name="name" type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-gray-700 text-black dark:text-white" required />
-        <input name="email" type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-gray-700 text-black dark:text-white" required />
-        <textarea name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-gray-700 text-black dark:text-white" required></textarea>
-        <button type="submit" class="bg-primary text-black px-6 py-3 rounded-lg font-semibold shadow ripple">Send Message</button>
+    <section id="contact" class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up" data-aos-duration="600">
+      <h2 class="font-bold text-light-text dark:text-dark-text mb-8 md:mb-12">✉️ Let's Collaborate</h2>
+      <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="space-y-6">
+        <div>
+          <label for="contact-name" class="sr-only">Your Name</label>
+          <input id="contact-name" name="name" type="text" placeholder="Your Name" required/>
+        </div>
+        <div>
+          <label for="contact-email" class="sr-only">Your Email</label>
+          <input id="contact-email" name="email" type="email" placeholder="Your Email" required/>
+        </div>
+        <div>
+          <label for="contact-message" class="sr-only">Your Message</label>
+          <textarea id="contact-message" name="message" rows="5" placeholder="How can we build something impactful together?" required></textarea>
+        </div>
+        <button type="submit" class="button-primary ripple">
+          Send Message
+        </button>
       </form>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-10 bg-gray-50 dark:bg-gray-800 space-y-4">
-      <div class="inline-flex space-x-6 justify-center">
-        <a href="https://linkedin.com/in/osanyin" class="hover:text-primary ripple">LinkedIn</a>
-        <a href="https://github.com/Osayino" class="hover:text-primary ripple">GitHub</a>
-        <a href="https://huggingface.co/Seragaldinbadr" class="hover:text-primary ripple">HuggingFace</a>
+    <footer class="text-center py-12 md:py-16 space-y-6">
+      <div class="flex justify-center space-x-6">
+        <a href="https://linkedin.com/in/osanyin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors custom-focus-visible p-2 rounded-md">
+          <svg role="img" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><title>LinkedIn</title><path d="M19.75 0H4.25A4.25 4.25 0 000 4.25v15.5A4.25 4.25 0 004.25 24h15.5A4.25 4.25 0 0024 19.75V4.25A4.25 4.25 0 0019.75 0zM7.69 20.5H4.25V9h3.44v11.5zM5.97 7.9c-1.09 0-1.97-.88-1.97-1.97s.88-1.97 1.97-1.97 1.97.88 1.97 1.97-.88 1.97-1.97 1.97zm14.53 12.6h-3.44v-5.54c0-1.32-.02-3.02-1.84-3.02-1.84 0-2.12 1.44-2.12 2.92v5.64H9.66V9h3.3v1.52h.05c.46-.88 1.58-1.8 3.26-1.8 3.48 0 4.13 2.29 4.13 5.28v6.02z"/></svg> </a>
+        <a href="https://github.com/Osayino" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors custom-focus-visible p-2 rounded-md">
+          <svg role="img" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> </a>
+        <a href="https://huggingface.co/Seragaldinbadr" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face Profile" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors custom-focus-visible p-2 rounded-md">
+          <svg role="img" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><title>Hugging Face</title><path d="M20.0002 5.15332C19.8733 4.67104 19.2571 4.51733 18.7702 4.64668C18.2821 4.77604 18.1273 5.39289 18.2541 5.87517L19.6162 11.1733C19.6606 11.3528 19.6047 11.5425 19.4702 11.6767C19.3356 11.8108 19.1456 11.8667 18.9656 11.8222L14.9802 10.8667C14.7702 10.8189 14.5913 10.6633 14.5302 10.4533L13.0762 5.00668C12.9733 4.65004 12.5502 4.48004 12.1902 4.58223C11.8302 4.68556 11.6589 5.11223 11.7624 5.4689L13.2162 10.9156C13.2773 11.1256 13.2189 11.3478 13.0762 11.5022C12.9321 11.6567 12.7233 11.7267 12.5189 11.68L9.01889 10.8222C8.80889 10.7745 8.63001 10.6189 8.56889 10.4089L7.25411 5.6689C7.12726 5.18662 6.51103 5.03223 6.02411 5.16223C5.53597 5.29159 5.38129 5.90844 5.50823 6.39072L6.82291 11.1308C6.86726 11.3102 6.81136 11.4999 6.67684 11.6341C6.54231 11.7682 6.35231 11.8241 6.17291 11.7796L3.82291 11.1308C3.38129 11.0122 3.00001 11.3689 3.00001 11.8222C3.00001 12.2756 3.38129 12.6322 3.82291 12.7508L6.17291 13.4008C6.35231 13.4452 6.54231 13.3893 6.67684 13.2552C6.81136 13.121 6.86726 12.9313 6.82291 12.7519L5.50823 17.9919C5.38129 18.4742 5.53597 19.091 6.02411 19.2204C6.51103 19.3504 7.12726 19.196 7.25411 18.7137L8.56889 13.9737C8.61334 13.7943 8.66914 13.6143 8.75411 13.4452L9.01889 13.596C9.22334 13.6413 9.40231 13.7969 9.46334 14.0069L10.9162 19.3756C11.0197 19.7322 11.4429 19.9022 11.8029 19.7999C12.1629 19.6966 12.3329 19.27 12.2297 18.9133L10.7756 13.4667C10.7145 13.2567 10.7729 13.0345 10.9162 12.88L12.5189 12.6022C12.7233 12.5589 12.9321 12.6289 13.0762 12.7833C13.2189 12.9378 13.2773 13.16 13.2162 13.37L11.7624 18.8167C11.6589 19.1733 11.8302 19.5999 12.1902 19.7033C12.5502 19.8056 12.9733 19.6356 13.0762 19.2789L14.5302 13.8322C14.5913 13.6222 14.7702 13.4667 14.9802 13.4189L18.9656 12.4633C19.1456 12.4189 19.3356 12.4748 19.4702 12.6089C19.6047 12.743 19.6606 12.9327 19.6162 13.1122L18.2541 18.4104C18.1273 18.8927 18.2821 19.5095 18.7702 19.6389C19.2571 19.7682 19.8733 19.6145 20.0002 19.1322L21.0002 15.4008V8.88223L20.0002 5.15332Z"/></svg> </a>
       </div>
-      <p class="text-sm text-gray-600 dark:text-gray-400">&copy; <span id="currentYear"></span> Serag Aldin Badr. Designed in Fortaleza, Brazil.</p>
+      <p class="text-xs text-gray-500 dark:text-gray-500/80">
+        &copy; <span id="currentYear"></span> Serag Aldin Badr. All rights reserved. <br class="sm:hidden"/>Crafted with passion in Fortaleza, Ceará, Brazil.
+      </p>
     </footer>
   </main>
 
-  <!-- Scripts -->
   <script>
-    // AOS init, theme, cursor, ripple, scroll spy/progress, back-to-top, greeting
-    document.addEventListener('DOMContentLoaded', ()=>{
-      // AOS
-      AOS.init({ duration:700, once:true, offset:100 });
-      // Greeting
-      const hr=new Date().getHours(), greet=hr<12?'Good morning':hr<18?'Good afternoon':'Good evening';
-      document.getElementById('greeting').textContent=`${greet}, I build AI-driven ag & logistics tools.`;
-      // Theme
-      const key='theme', stored=localStorage.getItem(key), prefers=window.matchMedia('(prefers-color-scheme:dark)').matches;
-      let dark= stored? stored==='dark' : prefers; const apply=t=>{document.documentElement.classList.toggle('dark',t); localStorage.setItem(key, t?'dark':'light');}; apply(dark);
-      document.getElementById('theme-toggle').innerHTML=dark? '☀️':'🌙'; document.getElementById('theme-toggle').onclick=()=>apply(!document.documentElement.classList.toggle('dark'));
-      // Cursor
-      const cursor=document.getElementById('cursor'); document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px'; cursor.style.top=e.clientY+'px';});
-      document.querySelectorAll('a,button,.project-card').forEach(el=>{el.onmouseenter=()=>cursor.classList.add('interactive-hover'); el.onmouseleave=()=>cursor.classList.remove('interactive-hover');});
-      // Ripple
-      document.querySelectorAll('.ripple').forEach(btn=>{btn.onclick=e=>{const r=document.createElement('span'), d=Math.max(btn.clientWidth,btn.clientHeight), rect=btn.getBoundingClientRect();btn.appendChild(r);r.className='ripple-effect';r.style.width=r.style.height=d+'px';r.style.left=e.clientX-rect.left-d/2+'px';r.style.top=e.clientY-rect.top-d/2+'px';}});
-      // Scroll progress & spy
-      const sp=document.getElementById('scrollProgress'), links=document.querySelectorAll('.nav-link'), secs=['hero','projects','clips','contact'].map(i=>document.getElementById(i));
-      window.onscroll=()=>{const y=window.scrollY, dh=document.body.scrollHeight-window.innerHeight; sp.style.width=(y/dh*100)+'%';
-        secs.forEach((s,i)=>{if(y>=s.offsetTop-200){links.forEach(l=>l.classList.remove('active'));links[i].classList.add('active');}});
-        document.getElementById('backTop').style.display=y>400?'block':'none';};
-      document.getElementById('backTop').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
-      // Lazy-load iframe
-      const ifr=document.querySelector('iframe.lazy'), ph=document.querySelector('.iframe-placeholder'); if(ifr){new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){ifr.src=ifr.dataset.src; if(ph)ph.style.display='none'; ifr.style.display='block';o.disconnect();}} ,{threshold:0.2}).observe(ifr); if(!ifr.src&&ph){ph.style.display='flex';ifr.style.display='none';}}
-      // Year
-      document.getElementById('currentYear').textContent=new Date().getFullYear();
+    // Debounce function
+    function debounce(func, wait, immediate) {
+      let timeout;
+      return function executedFunction() {
+        const context = this;
+        const args = arguments;
+        const later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- Elements ---
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const themeColorMeta = document.getElementById('theme-color-meta');
+      const cursorEl = document.getElementById('cursor');
+      const scrollProgressEl = document.getElementById('scrollProgress');
+      const backTopBtn = document.getElementById('backTop');
+      const greetingEl = document.getElementById('greeting');
+      const currentYearEl = document.getElementById('currentYear');
+      const navEl = document.querySelector('nav');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = Array.from(navLinks).map(link => document.getElementById(link.getAttribute('href').substring(1)));
+      const iframeEl = document.querySelector('iframe[data-src]');
+      const iframePlaceholderEl = document.querySelector('.iframe-placeholder');
+
+      // --- Constants ---
+      const THEME_STORAGE_KEY = 'portfolio-theme';
+      const LIGHT_THEME_META_COLOR = '#f8fafc'; // light.bg
+      const DARK_THEME_META_COLOR = '#0a0e1a';  // dark.bg
+
+      // --- AOS Initialization ---
+      function initAOS() {
+        AOS.init({
+          duration: 600,
+          once: true,
+          offset: 80,
+          easing: 'ease-out-cubic'
+        });
+      }
+
+      // --- Greeting ---
+      function setGreeting() {
+        if (!greetingEl) return;
+        const hours = new Date().getHours();
+        const baseGreeting = "I'm Serag, an AI innovator developing intelligent systems for agriculture and logistics.";
+        let timeSpecificGreeting = "";
+        if (hours < 5) timeSpecificGreeting = "Working late or starting early?";
+        else if (hours < 12) timeSpecificGreeting = "Good morning!";
+        else if (hours < 18) timeSpecificGreeting = "Good afternoon!";
+        else timeSpecificGreeting = "Good evening!";
+        greetingEl.textContent = `${timeSpecificGreeting} ${baseGreeting}`;
+      }
+
+      // --- Theme Management ---
+      function applyTheme(isDark) {
+        document.documentElement.classList.toggle('dark', isDark);
+        if (themeColorMeta) themeColorMeta.content = isDark ? DARK_THEME_META_COLOR : LIGHT_THEME_META_COLOR;
+        if (themeToggleBtn) {
+          themeToggleBtn.innerHTML = isDark
+            ? `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-2.172 4.243a1 1 0 111.414 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707zM4.95 6.364a1 1 0 000 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 0zM4 10a1 1 0 11-2 0v1a1 1 0 112 0v-1z" /></svg><span class="sr-only">Switch to light mode</span>`
+            : `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg><span class="sr-only">Switch to dark mode</span>`;
+        }
+         // Update cursor colors based on theme
+        if(cursorEl) {
+            const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--tw-color-primary-DEFAULT') || '#14b8a6';
+            const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--tw-color-accent-DEFAULT') || '#0ea5e9';
+            const primaryLightColor = getComputedStyle(document.documentElement).getPropertyValue('--tw-color-primary-light') || '#a3e635';
+            const accentLightColor = getComputedStyle(document.documentElement).getPropertyValue('--tw-color-accent-light') || '#38bdf8';
+
+            cursorEl.style.setProperty('--cursor-color', isDark ? primaryLightColor : primaryColor);
+            cursorEl.style.setProperty('--cursor-hover-color', isDark ? accentLightColor : accentColor);
+        }
+      }
+
+      function initializeTheme() {
+        const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        let isDark = storedTheme ? storedTheme === 'dark' : prefersDark;
+        applyTheme(isDark);
+        if (themeToggleBtn) {
+          themeToggleBtn.addEventListener('click', () => {
+            const newIsDark = !document.documentElement.classList.contains('dark');
+            applyTheme(newIsDark);
+            localStorage.setItem(THEME_STORAGE_KEY, newIsDark ? 'dark' : 'light');
+          });
+        }
+      }
+
+      // --- Custom Cursor ---
+      function initCustomCursor() {
+        if (!cursorEl) return;
+        document.addEventListener('mousemove', e => {
+          cursorEl.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+        });
+        const interactiveElements = document.querySelectorAll('a, button, .project-card, input, textarea, [role="button"]');
+        const textElements = document.querySelectorAll('h1, h2, h3, p, span:not(.sr-only)');
+
+        interactiveElements.forEach(el => {
+          el.addEventListener('mouseenter', () => cursorEl.classList.add('hover-link'));
+          el.addEventListener('mouseleave', () => cursorEl.classList.remove('hover-link'));
+        });
+        textElements.forEach(el => {
+          el.addEventListener('mouseenter', () => cursorEl.classList.add('hover-text'));
+          el.addEventListener('mouseleave', () => cursorEl.classList.remove('hover-text'));
+        });
+      }
+
+      // --- Ripple Effect ---
+      function initRippleEffect() {
+        document.querySelectorAll('.ripple').forEach(button => {
+          button.addEventListener('click', function (e) {
+            const existingRipple = this.querySelector('.ripple-effect-span');
+            if(existingRipple) existingRipple.remove();
+
+            const circle = document.createElement('span');
+            const diameter = Math.max(this.clientWidth, this.clientHeight);
+            const radius = diameter / 2;
+            const rect = this.getBoundingClientRect();
+
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${e.clientX - rect.left - radius}px`;
+            circle.style.top = `${e.clientY - rect.top - radius}px`;
+            circle.classList.add('ripple-effect-span');
+            // Use theme-aware ripple color
+            const isDarkTheme = document.documentElement.classList.contains('dark');
+            circle.style.background = isDarkTheme ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.5)';
+
+
+            this.appendChild(circle);
+            circle.addEventListener('animationend', () => circle.remove());
+          });
+        });
+      }
+
+      // --- Scroll-dependent Features ---
+      const handleScroll = debounce(() => {
+        const scrollY = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+        // Scroll Progress
+        if (scrollProgressEl) scrollProgressEl.style.width = docHeight > 0 ? `${(scrollY / docHeight) * 100}%` : '0%';
+
+        // Sticky Nav Class
+        if (navEl) navEl.classList.toggle('scrolled', scrollY > 50);
+
+        // Back to Top Button
+        if (backTopBtn) backTopBtn.classList.toggle('visible', scrollY > 300);
+
+
+        // Scroll Spy
+        let currentSectionId = '';
+        sections.forEach(section => {
+          if (section && scrollY >= section.offsetTop - navEl.offsetHeight - 50) { // Adjusted offset
+            currentSectionId = section.id;
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href').substring(1) === currentSectionId);
+          link.setAttribute('aria-current', link.classList.contains('active') ? 'page' : 'false');
+        });
+
+      }, 15); // Debounce scroll events for performance
+
+      function initScrollFeatures() {
+        window.addEventListener('scroll', handleScroll);
+        if (backTopBtn) {
+          backTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        // Initial call to set navbar state if page loads scrolled
+        handleScroll();
+      }
+
+
+      // --- Lazy Load Iframe ---
+      function initLazyLoadIframe() {
+        if (!iframeEl) return;
+        const iframeSrc = iframeEl.dataset.src;
+
+        const observer = new IntersectionObserver((entries, obs) => {
+          if (entries[0].isIntersecting) {
+            if (iframeSrc && iframeSrc !== "#" && !iframeSrc.includes("REPLACE_VIDEO_ID")) {
+              iframeEl.src = iframeSrc;
+              iframeEl.classList.remove('hidden');
+              if (iframePlaceholderEl) iframePlaceholderEl.style.display = 'none';
+            } else {
+              if (iframePlaceholderEl) iframePlaceholderEl.style.display = 'flex';
+               iframeEl.classList.add('hidden');
+            }
+            obs.disconnect();
+          }
+        }, { threshold: 0.1 });
+        observer.observe(iframeEl.parentElement); // Observe the container
+
+        // Initial placeholder visibility
+        if (!iframeSrc || iframeSrc === "#" || iframeSrc.includes("REPLACE_VIDEO_ID")) {
+            if (iframePlaceholderEl) iframePlaceholderEl.style.display = 'flex';
+            iframeEl.classList.add('hidden');
+        }
+      }
+
+      // --- Dynamic Year ---
+      function setDynamicYear() {
+        if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
+      }
+
+      // --- Initialize All ---
+      initAOS();
+      setGreeting();
+      initializeTheme();
+      initCustomCursor();
+      initRippleEffect();
+      initScrollFeatures();
+      initLazyLoadIframe();
+      setDynamicYear();
     });
   </script>
 </body>
