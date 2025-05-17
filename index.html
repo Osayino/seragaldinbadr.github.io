@@ -6,12 +6,12 @@
 
   <title>Serag Aldin Badr — Systems Builder</title>
   <meta name="description"
-        content="Dutch-Egyptian agronomy student & self-taught in AI. Field-tested in the Netherlands and Brazil, building tools to disrupt agriculture & supply chains." />
+        content="Dutch-Egyptian agronomy student & self-taught in AI. Field-tested in Brazil’s cashew belt; now on a mission to disrupt agriculture & logistics with code." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Serag Aldin Badr" />
   <meta property="og:description"
-        content="From cashew fields to reshaping rusty supply chains through technology. Let’s fix real problems." />
+        content="From cashew fields to reshaping supply chains through technology. Let’s fix real problems." />
   <meta property="og:image"
         content="https://Osayino.github.io/seragaldinbadr.github.io/assets/serag.jpg" />
 
@@ -20,97 +20,135 @@
 
   <!-- Tailwind + aspect-ratio plugin -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
+
+  <!-- AOS scroll animations -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
   <script>
-    tailwind.config = { theme:{ extend:{ aspectRatio:{ 'video':'16 / 9' } } } }
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins','sans-serif'] },
+          colors: { primary: '#14b8a6', accent: '#0ea5e9' },
+          aspectRatio: { 'video': '16 / 9' }
+        }
+      }
+    };
+    document.addEventListener('DOMContentLoaded', ()=> AOS.init());
   </script>
+
+  <!-- animate-spin-slow utility -->
+  <style>
+    @layer utilities {
+      .animate-spin-slow { animation: spin 20s linear infinite; }
+    }
+  </style>
 </head>
 
 <body class="bg-gray-900 text-gray-100 font-sans antialiased">
-  <!-- Dark-/light toggle -->
+  <!-- Dark/Light Toggle -->
   <button id="theme-toggle"
-          class="fixed top-4 right-4 p-2 bg-gray-800 rounded z-10">🌙/☀️</button>
+          class="fixed top-4 right-4 p-2 bg-gray-800 rounded z-10">
+    🌙 / ☀️
+  </button>
 
-  <main class="max-w-3xl mx-auto px-6 py-14 space-y-16">
+  <main class="space-y-16">
 
     <!-- HERO -->
-    <section class="text-center space-y-6">
-      <!-- looping hero clip -->
-      <video class="w-40 h-40 rounded-full mx-auto border-4 border-teal-400 shadow-lg object-cover"
-             src="assets/video/hero-loop.mp4"
-             autoplay muted loop playsinline preload="auto"
-             poster="assets/serag.jpg"></video>
+    <section class="relative overflow-hidden bg-gray-900">
+      <!-- Animated Background Blob -->
+      <div class="absolute -top-32 -left-32 w-[500px] h-[500px]
+                  bg-gradient-to-tr from-primary to-accent
+                  rounded-full opacity-30 animate-spin-slow"></div>
 
-      <h1 class="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent
-                 bg-gradient-to-r from-teal-300 via-blue-400 to-purple-500">
-        Serag&nbsp;Aldin&nbsp;Badr
-      </h1>
+      <div class="relative max-w-3xl mx-auto px-6 py-20 text-center space-y-6">
+        <!-- Profile Video Placeholder -->
+        <video class="w-40 h-40 rounded-full mx-auto border-4 border-primary shadow-lg object-cover"
+               poster="assets/serag.jpg"></video>
 
-      <p class="text-lg md:text-xl max-w-xl mx-auto text-gray-300">
-        International Land & Water Management student at Wageningen. Field-tested in Brazil’s cashew belt;  
-        now self-taught in AI and on a mission to disrupt agriculture & logistics.
-      </p>
+        <h1 class="font-extrabold text-5xl bg-clip-text text-transparent
+                   bg-gradient-to-r from-primary to-accent">
+          Serag&nbsp;Aldin&nbsp;Badr
+        </h1>
 
-      <!-- language badge -->
-      <p class="text-sm text-gray-400">
-        🇳🇱 Dutch • 🇬🇧 English • 🇧🇷 Portuguese • 🇪🇸 Spanish
-      </p>
+        <p class="text-gray-300 text-lg max-w-xl mx-auto" data-aos="fade-up">
+          International Land & Water Management student at Wageningen. Field-tested in Brazil’s cashew belt; now
+          self-taught in AI and on a mission to disrupt agriculture & logistics.
+        </p>
 
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="assets/cv.pdf"
-           class="bg-teal-400 text-gray-900 font-semibold px-6 py-3 rounded shadow
-                  hover:bg-teal-500 transition">📄 CV</a>
+        <p class="text-sm text-gray-400" data-aos="fade-up" data-aos-delay="100">
+          🇳🇱 Dutch • 🇬🇧 English • 🇧🇷 Portuguese • 🇪🇸 Spanish
+        </p>
 
-        <a href="media.html"
-           class="border border-gray-500 px-6 py-3 rounded text-gray-300
-                  hover:text-gray-100 hover:border-gray-300 transition">
-           🎥 Field Clips
-        </a>
-
-        <a href="assets/ops.html"
-           class="text-sm text-gray-400 hover:text-gray-200">/ops</a>
+        <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="assets/cv.pdf"
+             class="bg-primary text-gray-900 px-6 py-3 rounded-lg font-semibold shadow-lg
+                    hover:bg-primary/90 transition">
+            📄 CV
+          </a>
+          <a href="media.html"
+             class="border border-gray-600 px-6 py-3 rounded-lg text-gray-300
+                    hover:text-gray-100 hover:border-gray-400 transition">
+            🎥 Field Clips
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- PROJECTS (hidden until you have items) -->
-    <section class="space-y-8 hidden">
-      <h2 class="text-2xl font-bold border-b-2 border-gray-700 pb-2">📁 Projects</h2>
-      <ul class="space-y-4">
-        <li class="flex gap-3">
-          <span class="text-teal-400 text-2xl">🌱</span>
-          <span>REPLACE_WITH_PROJECT_1</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-teal-400 text-2xl">🛠️</span>
-          <span>REPLACE_WITH_PROJECT_2</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-teal-400 text-2xl">⚙️</span>
-          <span>REPLACE_WITH_PROJECT_3</span>
-        </li>
-      </ul>
+    <!-- FEATURED PROJECTS -->
+    <section class="max-w-4xl mx-auto px-6 py-16 space-y-8">
+      <h2 class="text-3xl font-bold text-center text-gray-100" data-aos="fade-right">
+        📁 Featured Projects
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-105
+                    transition-transform" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-semibold text-gray-100 mb-2">Biochar Trial (160 ha)</h3>
+          <p class="text-gray-400">
+            Embrapa Ceará — cut irrigation by 30 % with field-tested AI models.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-105
+                    transition-transform" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-semibold text-gray-100 mb-2">Root Mapper App</h3>
+          <p class="text-gray-400">
+            Open-source GIS tool that maps root depth from phone photos.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- MEDIA / CLIPS -->
-    <section id="clips" class="space-y-8">
-      <h2 class="text-2xl font-bold border-b-2 border-gray-700 pb-2">🎥 Field Clips</h2>
+    <section id="clips" class="max-w-4xl mx-auto px-6 py-16 space-y-4">
+      <h2 class="text-3xl font-bold text-center text-gray-100" data-aos="fade-right">
+        🎥 Field Clips
+      </h2>
 
-      <!-- YouTube embed -->
-      <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
+      <div class="aspect-video rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="100">
         <iframe class="w-full h-full lazy"
-                data-src="https://www.youtube.com/embed/REPLACE_ME?rel=0&modestbranding=1"
+                data-src="https://www.youtube.com/embed/REPLACE_VIDEO_ID?rel=0&modestbranding=1"
                 title="Cashew walk-through"
                 allow="accelerometer; gyroscope; encrypted-media; picture-in-picture"
-                allowfullscreen></iframe>
+                allowfullscreen>
+        </iframe>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="text-center space-y-4 text-sm text-gray-500">
+    <footer class="text-center space-y-4 text-sm text-gray-500 py-8 bg-gray-900">
       <p>Connect with me:</p>
       <div class="inline-flex space-x-6">
-        <a href="https://www.linkedin.com/in/osanyin/" class="hover:text-teal-300">LinkedIn</a>
-        <a href="https://github.com/Osayino"       class="hover:text-teal-300">GitHub</a>
-        <a href="https://huggingface.co/Seragaldinbadr"    class="hover:text-teal-300">HuggingFace</a>
+        <a href="https://www.linkedin.com/in/osanyin/" class="hover:text-primary">LinkedIn</a>
+        <a href="https://github.com/Osayino" class="hover:text-primary">GitHub</a>
+        <a href="https://huggingface.co/Seragaldinbadr" class="hover:text-primary">HuggingFace</a>
       </div>
     </footer>
   </main>
@@ -118,14 +156,16 @@
   <script>
     // Dark-mode toggle
     document.getElementById('theme-toggle')
-      .addEventListener('click', ()=> document.documentElement.classList.toggle('dark'));
+      .addEventListener('click', () =>
+        document.documentElement.classList.toggle('dark')
+      );
 
     // Lazy-load YouTube iframe
-    document.addEventListener('DOMContentLoaded', ()=>{
+    document.addEventListener('DOMContentLoaded', () => {
       const ifr = document.querySelector('iframe.lazy');
       if (!ifr) return;
-      const obs = new IntersectionObserver((e)=> {
-        if (e[0].isIntersecting) {
+      const obs = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
           ifr.src = ifr.dataset.src;
           obs.disconnect();
         }
