@@ -19,7 +19,7 @@
       "https://linkedin.com/in/osanyin",
       "https://github.com/Osayino",
       "https://huggingface.co/Seragaldinbadr",
-      "https://www.researchgate.net/profile/Serag-Aldin-Badr" // Added ResearchGate
+      "https://www.researchgate.net/profile/Serag-Aldin-Badr"
     ],
     "jobTitle":"AI Researcher & Agri-Food Systems Innovator",
     "alumniOf":{
@@ -55,7 +55,10 @@
             light:   { bg: '#f8fafc', text: '#0f172a', card: '#ffffff', border: '#e2e8f0', heading: '#1e293b' },
             dark:    { bg: '#0f172a', text: '#cbd5e1', card: '#1e293b', border: '#334155', heading: '#f1f5f9' }
           },
-          aspectRatio: { 'video': '16 / 9' },
+          aspectRatio: {
+            'video': '16 / 9',
+            'short': '9 / 16' // Added for YouTube Shorts
+          },
           animation: { 'ripple': 'ripple 0.6s linear forwards' },
           keyframes: { ripple: { 'to': { transform: 'scale(4)', opacity: '0' } } },
           transitionTimingFunction: { 'custom-ease': 'cubic-bezier(0.4, 0, 0.2, 1)' }
@@ -231,14 +234,18 @@
       <h2 class="font-bold text-center mb-12 md:mb-16">
         From the Field: Research in Action
       </h2>
-      <div class="aspect-video rounded-lg overflow-hidden shadow-xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border relative">
-        <iframe title="Field Clip Showcase" class="w-full h-full absolute inset-0 hidden" data-src="REPLACE_VIDEO_ID" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div class="iframe-placeholder absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
-          <svg class="w-16 h-16 text-gray-300 dark:text-gray-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9A2.25 2.25 0 0013.5 5.25h-9A2.25 2.25 0 002.25 7.5v9A2.25 2.25 0 004.5 18.75z" /></svg>
-          <p class="text-gray-500 dark:text-gray-400">Visual demonstrations and field insights are currently being curated.</p>
-          <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">This section will feature videos showcasing practical applications and results. Please replace `REPLACE_VIDEO_ID` with a YouTube embed link.</p>
-        </div>
+      <div class="relative mx-auto w-full max-w-xs aspect-short rounded-lg overflow-hidden shadow-xl bg-gray-800 border border-light-border dark:border-dark-border">
+        <iframe
+          title="The Potential of Cashew - YouTube Short"
+          class="w-full h-full absolute inset-0"
+          src="https://www.youtube.com/embed/6?autoplay=1&mute=0&loop=1&playlist=6&playsinline=1&controls=0&showinfo=0&rel=0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
+       <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+        Video: "The Potential of Cashew". Sound and autoplay are subject to browser policies.
+      </p>
     </section>
 
     <section id="contact" class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up" data-aos-duration="500">
@@ -289,8 +296,8 @@
           const href = link.getAttribute('href');
           return href ? document.getElementById(href.substring(1)) : null;
       }).filter(Boolean);
-      const iframeEl = document.querySelector('iframe[data-src]');
-      const iframePlaceholderEl = document.querySelector('.iframe-placeholder');
+      const iframeEl = document.querySelector('#clips iframe'); // More specific selector for the video iframe
+      const iframeContainerEl = document.querySelector('#clips .aspect-short')?.parentElement; // Parent of the aspect ratio div
 
       const THEME_STORAGE_KEY = 'portfolio-theme-v4-narrative';
       const LIGHT_THEME_META_COLOR = tailwind.config.theme.extend.colors.light.bg;
@@ -386,32 +393,8 @@
         handleScroll();
       }
 
-      function initLazyLoadIframe() {
-        if (!iframeEl) {
-          if(iframePlaceholderEl) iframePlaceholderEl.style.display = 'flex';
-          return;
-        }
-        const iframeSrc = iframeEl.dataset.src;
-        const observer = new IntersectionObserver((entries, obs) => {
-          if (entries[0].isIntersecting) {
-            if (iframeSrc && iframeSrc !== "#" && iframeSrc !== "REPLACE_VIDEO_ID" && iframeSrc.trim() !== "") {
-              iframeEl.src = iframeSrc;
-              iframeEl.classList.remove('hidden');
-              if (iframePlaceholderEl) iframePlaceholderEl.style.display = 'none';
-            } else {
-              if (iframePlaceholderEl) iframePlaceholderEl.style.display = 'flex';
-               iframeEl.classList.add('hidden');
-            }
-            obs.disconnect();
-          }
-        }, { rootMargin: '50px', threshold: 0.01 });
-        const elementToObserve = iframeEl.parentElement || iframePlaceholderEl;
-        if (elementToObserve) { observer.observe(elementToObserve); }
-        if (!iframeSrc || iframeSrc === "#" || iframeSrc === "REPLACE_VIDEO_ID" || iframeSrc.trim() === "") {
-            if (iframePlaceholderEl) iframePlaceholderEl.style.display = 'flex';
-            iframeEl.classList.add('hidden');
-        }
-      }
+      // Removed old iframe lazy load logic as video is now directly embedded
+      // If you add more iframes with data-src, that logic can be reinstated.
 
       function setDynamicYear() {
         if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
@@ -422,7 +405,7 @@
       initializeTheme();
       initRippleEffect();
       initScrollFeatures();
-      initLazyLoadIframe();
+      // initLazyLoadIframe(); // No longer needed for this specific video
       setDynamicYear();
     });
   </script>
