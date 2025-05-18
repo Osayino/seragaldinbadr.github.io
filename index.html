@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Serag Aldin Badr — AI, Policy & Resilient Agri-Food Systems | Researcher & Innovator</title>
-  <meta name="description" content="Serag Aldin Badr, Wageningen B.Sc. (ILWM), blending deep tropical agriculture research (Embrapa/biochar) with self-taught AI to forge resilient agri-food systems and inform policy. Pursuing M.Sc. (WUR, 2025-27) & inviting collaborations with leading US institutions for high-impact research, publications, and policy-relevant solutions in the Global South."/>
+  <title>Serag Aldin Badr — AI for Resilient Agri-Food Systems | Researcher & Innovator</title>
+  <meta name="description" content="Serag Aldin Badr, Wageningen B.Sc. (ILWM), blending deep tropical agriculture research (Embrapa/biochar) with self-taught AI to forge resilient agri-food systems. Pursuing M.Sc. (WUR, 2025-27) & inviting collaborations with leading research institutions for high-impact publications and innovation in the Global South."/>
   <meta id="theme-color-meta" name="theme-color" content="#1a2e27" />
 
   <script type="application/ld+json">
@@ -14,26 +14,20 @@
     "name":"Serag Aldin Badr",
     "url":"https://Osayino.github.io",
     "image":"https://Osayino.github.io/assets/serag.jpg",
-    "description": "Wageningen University B.Sc. in International Land & Water Management. Self-taught AI developer with field research experience at Embrapa Tropical Agroindustry (Brazil) on biochar's impact on cashew root growth and drought resilience (targeting publication). Returning to Wageningen for an M.Sc. (Sept 2025 - Aug 2027, exploring ILWM or Geo-Information Sciences) with a mission to leverage AI, systems thinking, and data-driven insights to inform policy and build resilient agri-food chains in the Global South. Proactively developing research and inviting collaborations with leading institutions to co-author high-impact papers and build impactful solutions. My approach is 'mind and hand' – I verify concepts through building and field testing.",
+    "description": "Wageningen University B.Sc. in International Land & Water Management. Self-taught AI developer with field research experience at Embrapa Tropical Agroindustry (Brazil) on biochar's impact on cashew root growth and drought resilience (targeting publication). Returning to Wageningen for an M.Sc. (Sept 2025 - Aug 2027, exploring ILWM or Geo-Information Sciences) with a mission to leverage AI and systems thinking for resilient agri-food chains in the Global South. Proactively developing research and inviting collaborations with leading institutions to co-author high-impact papers and build impactful solutions. My approach is 'mind and hand' – I verify concepts through building and field testing.",
     "sameAs":[
       "https://linkedin.com/in/osanyin",
       "https://github.com/Osayino",
       "https://huggingface.co/Seragaldinbadr",
       "https://www.researchgate.net/profile/Serag-Aldin-Badr"
     ],
-    "jobTitle":"AI Researcher, Policy Analyst & Agri-Food Systems Innovator",
+    "jobTitle":"AI Researcher & Agri-Food Systems Innovator",
     "alumniOf":{
         "@type":"EducationalOrganization",
         "name":"Wageningen University & Research"
     },
     "worksFor":{"@type":"Organization","name":"Independent Researcher & Agri-Tech Developer"},
-    "knowsAbout":[
-        "Tropical Agriculture", "Biochar", "Cashew Physiology", "Root Dynamics", "Drought Resilience", 
-        "Sustainable Land Management", "Water Management", "Artificial Intelligence", "Machine Learning", 
-        "LLMs", "Python", "GIS", "Data Analysis", "Systems Thinking", "Supply Chain Optimization", 
-        "Scientific Writing", "Research Collaboration", "Grant Proposal Development", "MVP Development", 
-        "Startup Development", "Agricultural Policy", "Food Systems Policy", "Value Chain Analysis"
-    ],
+    "knowsAbout":["Tropical Agriculture","Biochar","Cashew Physiology","Root Dynamics","Drought Resilience","Sustainable Land Management","Water Management","Artificial Intelligence","Machine Learning","LLMs","Python","GIS","Data Analysis","Systems Thinking","Supply Chain Optimization", "Scientific Writing", "Research Collaboration", "Grant Proposal Development", "MVP Development", "Startup Development","Agricultural Policy", "Food Systems Policy", "Value Chain Analysis"],
     "nationality":"Dutch",
     "hasCredential": {
         "@type": "EducationalOccupationalCredential",
@@ -56,14 +50,35 @@
         extend: {
           fontFamily: { sans: ['Poppins', 'sans-serif'] },
           colors: {
-            primary: { DEFAULT: '#22c55e', light: '#4ade80', dark: '#16a34a' },
-            accent:  { DEFAULT: '#f59e0b', light: '#fbbf24', dark: '#d97706' },
-            light:   { bg: '#f7f6f0', text: '#3a4d39', card: '#ffffff', border: '#e0e0d1', heading: '#2a3a29' },
-            dark:    { bg: '#1a2e27', text: '#c8d5d0', card: '#243d36', border: '#405a50', heading: '#e6f0ec' }
+            primary: { DEFAULT: '#22c55e', light: '#4ade80', dark: '#16a34a' }, // Green-500
+            accent:  { DEFAULT: '#f59e0b', light: '#fbbf24', dark: '#d97706' }, // Amber-500
+            light:   { 
+                bg: '#f7f6f0', // Softer off-white, slightly warm
+                text: '#414833', // Dark olive/earthy green for text
+                card: '#ffffff', 
+                border: '#e0e0d1', 
+                heading: '#2a3a29' // Darker earthy green for headings
+            },
+            dark:    { 
+                bg: '#1f2a1a', // Very dark, desaturated green
+                text: '#d1e0db', 
+                card: '#2a3d34', // Darker card background
+                border: '#405a50', 
+                heading: '#e6f0ec' 
+            }
           },
           aspectRatio: { 'video': '16 / 9', 'short': '9 / 16' },
-          animation: { 'ripple': 'ripple 0.6s linear forwards' },
-          keyframes: { ripple: { 'to': { transform: 'scale(4)', opacity: '0' } } },
+          animation: { 
+            'ripple': 'ripple 0.6s linear forwards',
+            'subtle-gradient': 'subtleGradientShift 60s ease infinite alternate' // Slower animation
+           },
+          keyframes: { 
+            ripple: { 'to': { transform: 'scale(4)', opacity: '0' } },
+            subtleGradientShift: {
+              '0%': { backgroundPosition: '0% 0%' },
+              '100%': { backgroundPosition: '100% 100%' }
+            }
+          },
           transitionTimingFunction: { 'custom-ease': 'cubic-bezier(0.4, 0, 0.2, 1)' }
         }
       }
@@ -75,15 +90,39 @@
 
   <style>
     body {
-      @apply font-sans antialiased overflow-x-hidden bg-light-bg text-light-text transition-colors duration-300 ease-custom-ease;
-      background-image: linear-gradient(145deg, config('theme.colors.light.bg') 0%, #f0efe2 100%);
+      @apply font-sans antialiased overflow-x-hidden bg-light-bg text-light-text transition-colors duration-500 ease-custom-ease; /* Slower color transition for theme */
+      /* Subtle Animated Gradient */
+      background: linear-gradient(135deg, 
+        config('theme.colors.light.bg') 20%, 
+        #e8e6d9 50%, /* Intermediate slightly different off-white */
+        config('theme.colors.light.bg') 80%
+      );
+      background-size: 400% 400%; /* Must be larger than 100% for position animation to work */
+      animation: subtle-gradient 60s ease infinite alternate;
     }
     .dark body {
       @apply bg-dark-bg text-dark-text;
-      background-image: linear-gradient(145deg, config('theme.colors.dark.bg') 0%, #1f3830 100%);
+      background: linear-gradient(135deg, 
+        config('theme.colors.dark.bg') 20%, 
+        #2a3d34 50%, /* Intermediate slightly different dark green */
+        config('theme.colors.dark.bg') 80%
+      );
+      background-size: 400% 400%;
+      animation: subtle-gradient 60s ease infinite alternate;
     }
-    main > section, footer { @apply bg-light-card dark:bg-dark-card transition-colors duration-300 ease-custom-ease; }
-    #hero { @apply bg-transparent dark:bg-transparent; }
+
+    main > section { 
+      @apply bg-light-card dark:bg-dark-card transition-colors duration-500 ease-custom-ease shadow-sm; 
+    }
+    /* Hero and specific narrative sections can blend more with body or have distinct subtle treatments */
+    #hero, #mission-focus, #research-vision, #contact.narrative-section { 
+      @apply bg-transparent dark:bg-transparent shadow-none;
+    }
+     /* Ensure sections that alternate still have a card-like feel if not transparent */
+    #expertise, #clips, footer {
+      @apply bg-light-card dark:bg-dark-card rounded-none md:rounded-xl; /* Remove rounding on mobile, add on md+ */
+    }
+
 
     @layer utilities {
       .ripple-effect-span { position:absolute; border-radius:50%; transform:scale(0); animation: ripple 0.6s linear forwards; }
@@ -93,6 +132,7 @@
     h1,h2,h3,h4,h5,h6 { @apply text-light-heading dark:text-dark-heading; }
     .text-gradient-green-accent { @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent; }
     .dark .text-gradient-green-accent { @apply from-primary-light to-accent-light; }
+
     #scrollProgress { position:fixed; top:0; left:0; height:4px; background:config('theme.colors.primary.DEFAULT'); width:0%; z-index:10000; transition: width 0.05s linear; }
     .dark #scrollProgress { background:config('theme.colors.primary.light'); }
     #backTop { position:fixed; bottom:-60px; right:1.5rem; background:config('theme.colors.primary.DEFAULT'); color:white; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:9999; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:bottom .3s ease-custom-ease, background-color .3s ease-custom-ease, transform .3s ease-custom-ease, opacity .3s ease-custom-ease; opacity:0; }
@@ -100,7 +140,7 @@
     #backTop:hover { background:config('theme.colors.primary.dark'); transform: scale(1.05); }
     .dark #backTop { background:config('theme.colors.primary.light'); color:config('theme.colors.dark.bg'); }
     .dark #backTop:hover { background:config('theme.colors.accent.light'); }
-    nav { transition:background-color .3s ease-custom-ease, box-shadow .3s ease-custom-ease; box-shadow:0 2px 4px rgba(0,0,0,0); @apply bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md; }
+    nav { transition:background-color .3s ease-custom-ease, box-shadow .3s ease-custom-ease; box-shadow:0 2px 4px rgba(0,0,0,0); @apply bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm; }
     nav.scrolled { @apply bg-light-card/90 dark:bg-dark-card/90; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
     .dark nav.scrolled { box-shadow:0 4px 12px rgba(0,0,0,0.15); }
     .nav-link { position:relative; padding:.5rem .25rem; transition:color .3s ease-custom-ease,opacity .3s ease-custom-ease; color:config('theme.colors.light.text'); font-weight:500; opacity:.75; }
@@ -112,22 +152,29 @@
     .nav-link.active { color:config('theme.colors.primary.DEFAULT'); font-weight:600; opacity:1; }
     .dark .nav-link.active { color:config('theme.colors.primary.light'); }
     .nav-link.active::after { width:60%; }
+
     .content-card { @apply bg-light-card dark:bg-dark-card rounded-lg p-6 md:p-8 shadow-lg transform transition-all duration-300 ease-custom-ease hover:shadow-xl hover:-translate-y-1; border:1px solid config('theme.colors.light.border'); }
     .dark .content-card { border:1px solid config('theme.colors.dark.border'); }
     .content-card h3 { @apply text-light-heading dark:text-dark-heading font-semibold; }
-    .content-card p, .content-card ul { @apply text-gray-700 dark:text-gray-300; }
+    .content-card p, .content-card ul { @apply text-light-text dark:text-dark-text max-w-2xl; } /* Constrain text width in cards */
+    .content-card ul { @apply pl-5; } /* Indent lists in cards */
+
+
     input[type="text"],input[type="email"],textarea { @apply w-full px-4 py-3 rounded-md border bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text border-light-border dark:border-dark-border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-card dark:focus:ring-offset-dark-card focus:ring-primary dark:focus:ring-primary-light transition-all duration-300 ease-custom-ease; box-shadow:0 1px 2px rgba(0,0,0,0.03) inset; }
     input[type="text"]::placeholder,input[type="email"]::placeholder,textarea::placeholder { @apply text-gray-500 dark:text-gray-400; }
     .button { @apply px-8 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transform active:scale-95 transition-all duration-200 ease-custom-ease custom-focus-visible text-base md:text-lg; }
     .button-primary { @apply button bg-primary text-white hover:bg-primary-dark; }
-    .dark .button-primary { @apply bg-primary-light text-dark-bg hover:bg-accent-light; }
+    .dark .button-primary { @apply bg-primary-light text-dark-bg hover:bg-accent-light; } /* Using accent for dark mode hover as primary-dark might be too dark on dark-bg */
     .button-secondary { @apply button border-2 border-primary text-primary hover:bg-primary hover:text-white; }
     .dark .button-secondary { @apply border-primary-light text-primary-light hover:bg-primary-light hover:text-dark-bg; }
     .link-styled { @apply text-primary dark:text-primary-light font-medium underline hover:opacity-80 custom-focus-visible rounded; }
-    @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto !important;} *,*::before,*::after{animation-duration:.001ms !important;animation-delay:0ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;transition-delay:0ms !important;scroll-behavior:auto !important;} [data-aos]{opacity:1 !important;transform:none !important;} }
+
+    @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto !important;} *,*::before,*::after{animation-duration:.001ms !important;animation-delay:0ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;transition-delay:0ms !important;scroll-behavior:auto !important;} [data-aos]{opacity:1 !important;transform:none !important;} body{animation:none !important;} }
+    
     .narrative-section { @apply py-20 md:py-28 lg:py-32 text-center; }
-    .narrative-section h2 { @apply text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8; }
-    .narrative-section p { @apply text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto text-light-text/90 dark:text-dark-text/80 leading-relaxed; }
+    .narrative-section h2 { @apply text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8; } /* Slightly adjusted h2 size */
+    .narrative-section p { @apply text-lg md:text-xl max-w-3xl mx-auto text-light-text/90 dark:text-dark-text/80 leading-relaxed; } /* Constrained narrative p */
+    
     main>section { @apply py-16 md:py-20 lg:py-24; }
     h1 { @apply text-4xl sm:text-5xl lg:text-6xl font-extrabold; }
     h3 { @apply text-xl sm:text-2xl lg:text-3xl font-semibold; }
@@ -202,15 +249,19 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
                 <div class="content-card" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="mb-4 text-primary dark:text-primary-light">Grounded in Agricultural Science</h3>
-                    <p class="mb-3">My <strong class="font-semibold">B.Sc. in International Land and Water Management from Wageningen University & Research</strong> provided a robust scientific foundation. This was critically enhanced by a year of intensive field research at <strong class="font-semibold">Embrapa Tropical Agroindustry</strong> in Ceará, Brazil.</p>
-                    <h4 class="font-semibold mt-4 mb-2 text-light-heading/90 dark:text-dark-heading/90">Key Research: Cashew Resilience & Biochar</h4>
-                    <p class="text-sm md:text-base">I investigated the impact of five distinct biochar concentrations on root architecture and water productivity in over 60 cashew trees across four soil depths. This research, currently being prepared for publication with Embrapa, is crucial for developing data-driven strategies to bolster agricultural resilience in arid and semi-arid tropical regions, demonstrating potential for up to 30% irrigation savings.</p>
+                    <div class="space-y-3">
+                        <p class="mb-3">My <strong class="font-semibold">B.Sc. in International Land and Water Management from Wageningen University & Research</strong> provided a robust scientific foundation. This was critically enhanced by a year of intensive field research at <strong class="font-semibold">Embrapa Tropical Agroindustry</strong> in Ceará, Brazil.</p>
+                        <h4 class="font-semibold mt-4 mb-2 text-light-heading/90 dark:text-dark-heading/90 text-lg md:text-xl">Key Research: Cashew Resilience & Biochar</h4>
+                        <p class="text-sm md:text-base">I investigated the impact of five distinct biochar concentrations on root architecture and water productivity in over 60 cashew trees across four soil depths. This research, currently being prepared for publication with Embrapa, is crucial for developing data-driven strategies to bolster agricultural resilience in arid and semi-arid tropical regions, demonstrating potential for up to 30% irrigation savings.</p>
+                    </div>
                 </div>
                 <div class="content-card" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="mb-4 text-accent dark:text-accent-light">Empowered by AI & Systems Thinking</h3>
-                    <p class="mb-3">As a <strong class="font-semibold">self-taught AI developer</strong>, I am passionate about translating data into actionable intelligence. My growing expertise spans Python, Machine Learning (including LLMs), and geospatial analysis. I apply <strong class="font-semibold">systems thinking</strong> to design and prototype solutions for complex, real-world problems.</p>
-                    <h4 class="font-semibold mt-4 mb-2 text-light-heading/90 dark:text-dark-heading/90">Prototype: AI for Agri-Supply Chain Disruption</h4>
-                    <p class="text-sm md:text-base">Developed a proof-of-concept AI system to optimize cashew supply chains, using predictive analytics and logistics modeling. This project showcased the potential for significant cost reductions and efficiency gains for smallholders. (<em>Ongoing MVP development for similar challenges shared on <a href="https://github.com/Osayino" target="_blank" rel="noopener noreferrer" class="link-styled">GitHub</a></em>).</p>
+                     <div class="space-y-3">
+                        <p class="mb-3">As a <strong class="font-semibold">self-taught AI developer</strong>, I am passionate about translating data into actionable intelligence. My growing expertise spans Python, Machine Learning (including LLMs), and geospatial analysis. I apply <strong class="font-semibold">systems thinking</strong> to design and prototype solutions for complex, real-world problems.</p>
+                        <h4 class="font-semibold mt-4 mb-2 text-light-heading/90 dark:text-dark-heading/90 text-lg md:text-xl">Prototype: AI for Agri-Supply Chain Disruption</h4>
+                        <p class="text-sm md:text-base">Developed a proof-of-concept AI system to optimize cashew supply chains, using predictive analytics and logistics modeling. This project showcased the potential for significant cost reductions and efficiency gains for smallholders. (<em>Ongoing MVP development for similar challenges shared on <a href="https://github.com/Osayino" target="_blank" rel="noopener noreferrer" class="link-styled">GitHub</a></em>).</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -224,20 +275,24 @@
         </p>
         <div class="content-card max-w-4xl mx-auto text-left">
             <h3 class="font-semibold mb-4 text-center">Invitation for Synergistic Research & Co-Authorship</h3>
-            <p class="text-sm md:text-base">
-            My current research trajectory and M.Sc. studies are geared towards producing rigorous, publishable work. I believe deeply in the power of collaboration to accelerate discovery and amplify impact. My approach is <strong class="font-semibold">'mind and hand'</strong> – I develop AI-driven concepts and then rigorously verify them through practical application and field data.
-            <br><br>
-            I am proactively developing research proposals and seeking to co-author impactful papers in areas such as:
-            <ul class="list-disc list-inside mt-3 mb-3 space-y-1 text-sm md:text-base">
-                <li>AI-driven high-throughput phenotyping for climate-resilient tropical crops.</li>
-                <li>Intelligent supply chain models to enhance smallholder market access and equity.</li>
-                <li>Predictive analytics and early-warning systems for agricultural risks in the Global South.</li>
-                <li>Developing data-driven insights for <strong class="font-medium text-light-heading dark:text-dark-heading">agricultural policy and sustainable development goals (SDGs)</strong>.</li>
-            </ul>
-            I am particularly interested in connecting with research groups whose work aligns with these themes and who value an interdisciplinary, solutions-oriented approach. While I admire the pioneering research emerging from institutions like <strong class="font-medium text-light-heading dark:text-dark-heading">Cornell, Stanford, MIT, and Harvard</strong>, my primary goal is to find the best intellectual synergy to produce groundbreaking work and contribute meaningfully to the field. These collaborations will also be invaluable in shaping future grant applications (e.g., Fulbright, Dutch2USA).
-            <br><br>
-            Follow my academic progress on <a href="https://www.researchgate.net/profile/Serag-Aldin-Badr" target="_blank" rel="noopener noreferrer" class="link-styled">ResearchGate</a>.
-            <a href="#contact" class="link-styled block mt-4 font-semibold text-center text-lg">Let's Explore a Research Synergy →</a></p>
+            <div class="space-y-3">
+                <p class="text-sm md:text-base">
+                My current research trajectory and M.Sc. studies are geared towards producing rigorous, publishable work. I believe deeply in the power of collaboration to accelerate discovery and amplify impact. My approach is <strong class="font-semibold">'mind and hand'</strong> – I develop AI-driven concepts and then rigorously verify them through practical application and field data.
+                </p>
+                <p class="text-sm md:text-base">
+                I am proactively developing research proposals and seeking to co-author impactful papers in areas such as:
+                <ul class="list-disc list-inside mt-3 mb-3 space-y-1 text-sm md:text-base">
+                    <li>AI-driven high-throughput phenotyping for climate-resilient tropical crops.</li>
+                    <li>Intelligent supply chain models to enhance smallholder market access and equity.</li>
+                    <li>Predictive analytics and early-warning systems for agricultural risks in the Global South.</li>
+                    <li>Developing data-driven insights for <strong class="font-medium">agricultural policy and sustainable development goals (SDGs)</strong>.</li>
+                </ul>
+                I am particularly interested in connecting with research groups whose work aligns with these themes and who value an interdisciplinary, solutions-oriented approach. While I admire the pioneering research emerging from institutions like <strong class="font-medium">Cornell, Stanford, MIT, and Harvard</strong>, my primary goal is to find the best intellectual synergy to produce groundbreaking work and contribute meaningfully to the field. These collaborations will also be invaluable in shaping future grant applications (e.g., Fulbright, Dutch2USA).
+                </p>
+                <p class="text-sm md:text-base">
+                Follow my academic progress on <a href="https://www.researchgate.net/profile/Serag-Aldin-Badr" target="_blank" rel="noopener noreferrer" class="link-styled">ResearchGate</a>.
+                <a href="#contact" class="link-styled block mt-4 font-semibold text-center text-lg">Let's Explore a Research Synergy →</a></p>
+            </div>
         </div>
       </div>
     </section>
@@ -250,7 +305,7 @@
         <iframe
           title="The Potential of Cashew - YouTube Short"
           class="w-full h-full absolute inset-0"
-          src="https://www.youtube.com/embed/REPLACE_VIDEO_ID0"
+          src="https://www.youtube.com/embed/REPLACE_VIDEO_ID1"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
@@ -269,7 +324,7 @@
         <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="space-y-6 max-w-xl mx-auto">
           <div><label for="contact-name" class="sr-only">Your Name</label><input id="contact-name" name="name" type="text" placeholder="Your Name" required/></div>
           <div><label for="contact-email" class="sr-only">Your Email</label><input id="contact-email" name="email" type="email" placeholder="Your Email" required/></div>
-          <div><label for="contact-message" class="sr-only">Your Message</label><textarea id="contact-message" name="message" rows="5" placeholder="Interested in discussing research synergies, M.Sc./PhD opportunities, or innovative projects at the intersection of AI and tropical agriculture? I'm eager to hear your ideas and explore how we can make a difference." required></textarea></div>
+          <div><label for="contact-message" class="sr-only">Your Message</label><textarea id="contact-message" name="message" rows="5" placeholder="Interested in co-authoring research, M.Sc./PhD supervision, MVP development, or partnering on disruptive AgTech? Please outline your ideas." required></textarea></div>
           <button type="submit" class="button-primary ripple !text-lg !px-10 !py-4">
             Start a Conversation
           </button>
@@ -314,7 +369,7 @@
           return href ? document.getElementById(href.substring(1)) : null;
       }).filter(Boolean);
       
-      const THEME_STORAGE_KEY = 'portfolio-theme-v6-refined-narrative'; // New key
+      const THEME_STORAGE_KEY = 'portfolio-theme-v6-refined-narrative';
       const LIGHT_THEME_META_COLOR = tailwind.config.theme.extend.colors.light.bg;
       const DARK_THEME_META_COLOR = tailwind.config.theme.extend.colors.dark.bg;
 
@@ -322,25 +377,25 @@
 
       function setGreeting() {
         if (!greetingEl) return;
-        const timeGreetingEl = document.createElement('span'); // Create a span for the time-based part
+        const timeGreetingEl = document.createElement('span'); 
         timeGreetingEl.id = 'time-greeting';
+        // Current time is Sunday, May 18, 2025 at 12:39:29 AM -03:00 (Fortaleza Time)
+        // This is 00:39 in Fortaleza.
+        const hours = 0; //  For testing: const hours = new Date().getHours(); 
+                               // For actual: based on the provided time, hours = 0.
         
-        const hours = new Date().getHours(); // Get current hours for the dynamic greeting part
-
         const baseIntro = `I'm an agri-food systems innovator, merging my <strong class="font-medium text-light-heading dark:text-dark-heading">Wageningen University</strong> background in International Land & Water Management with a passionate, self-driven journey into <strong class="font-medium text-light-heading dark:text-dark-heading">Artificial Intelligence</strong>. My year of field research at <strong class="font-medium text-light-heading dark:text-dark-heading">Embrapa</strong> in Brazil's cashew belt crystallized my focus: leveraging AI and systems thinking to build tangible solutions for <strong class="font-medium text-light-heading dark:text-dark-heading">tropical agriculture</strong> and create more resilient <strong class="font-medium text-light-heading dark:text-dark-heading">supply chains</strong> that empower communities in the Global South. As I prepare to return to Wageningen for my M.Sc. (Sept 2025 - Aug 2027, exploring ILWM or Geo-Information Sciences), my drive is to contribute to impactful research and build a strong foundation for future innovations.`;
         let timeSpecificGreetingText = "Hello.";
         
-        // Current time from system: Sunday, May 18, 2025 at 12:33:05 AM -03:00 (Fortaleza time)
-        // This is 00:33 in Fortaleza.
         if (hours < 5 || hours >= 22) timeSpecificGreetingText = "Up late or starting early?";
         else if (hours < 12) timeSpecificGreetingText = "Good morning.";
         else if (hours < 18) timeSpecificGreetingText = "Good afternoon.";
         else timeSpecificGreetingText = "Good evening.";
         
-        timeGreetingEl.textContent = timeSpecificGreetingText + " "; // Add space after time greeting
-        greetingEl.innerHTML = ''; // Clear existing content
+        timeGreetingEl.textContent = timeSpecificGreetingText + " ";
+        greetingEl.innerHTML = ''; 
         greetingEl.appendChild(timeGreetingEl);
-        greetingEl.innerHTML += baseIntro; // Append the rest of the intro
+        greetingEl.innerHTML += baseIntro;
       }
       
 
