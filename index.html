@@ -57,7 +57,7 @@
           },
           aspectRatio: {
             'video': '16 / 9',
-            'short': '9 / 16' // Added for YouTube Shorts
+            'short': '9 / 16'
           },
           animation: { 'ripple': 'ripple 0.6s linear forwards' },
           keyframes: { ripple: { 'to': { transform: 'scale(4)', opacity: '0' } } },
@@ -225,7 +225,7 @@
                 <li>Developing early-warning systems for agricultural risks in the Global South.</li>
             </ul>
           You can also follow my academic journey and future publications on <a href="https://www.researchgate.net/profile/Serag-Aldin-Badr" target="_blank" rel="noopener noreferrer" class="link-styled">ResearchGate</a>.
-          <a href="#contact" class="link-styled block mt-3 font-semibold">Propose a Collaboration &rarr;</a></p>
+          <a href="#contact" class="link-styled block mt-3 font-semibold">Propose a Collaboration →</a></p>
         </article>
       </div>
     </section>
@@ -238,13 +238,13 @@
         <iframe
           title="The Potential of Cashew - YouTube Short"
           class="w-full h-full absolute inset-0"
-          src="https://www.youtube.com/embed/6?autoplay=1&mute=0&loop=1&playlist=6&playsinline=1&controls=0&showinfo=0&rel=0"
+          src="googleusercontent.com/youtube.com/00"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
       </div>
        <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
-        Video: "The Potential of Cashew". Sound and autoplay are subject to browser policies.
+        Video: "The Potential of Cashew". Sound and autoplay are subject to browser policies. Loop enabled.
       </p>
     </section>
 
@@ -296,8 +296,9 @@
           const href = link.getAttribute('href');
           return href ? document.getElementById(href.substring(1)) : null;
       }).filter(Boolean);
-      const iframeEl = document.querySelector('#clips iframe'); // More specific selector for the video iframe
-      const iframeContainerEl = document.querySelector('#clips .aspect-short')?.parentElement; // Parent of the aspect ratio div
+      
+      // Note: The old iframe lazy load logic for a general placeholder is removed
+      // as we are now directly embedding the specific YouTube video.
 
       const THEME_STORAGE_KEY = 'portfolio-theme-v4-narrative';
       const LIGHT_THEME_META_COLOR = tailwind.config.theme.extend.colors.light.bg;
@@ -393,9 +394,6 @@
         handleScroll();
       }
 
-      // Removed old iframe lazy load logic as video is now directly embedded
-      // If you add more iframes with data-src, that logic can be reinstated.
-
       function setDynamicYear() {
         if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
       }
@@ -405,7 +403,6 @@
       initializeTheme();
       initRippleEffect();
       initScrollFeatures();
-      // initLazyLoadIframe(); // No longer needed for this specific video
       setDynamicYear();
     });
   </script>
